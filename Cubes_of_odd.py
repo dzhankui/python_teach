@@ -14,4 +14,3 @@ for i in cubeslist:
     if i % 7 == 0:
         Sum7 +=  i
 print(Sum7)
-# print (cubeslist)
