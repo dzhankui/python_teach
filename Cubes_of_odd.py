@@ -11,9 +11,11 @@ cubeslist = []
 Sum7 = 0
 d = 17
 
+
 # cube computing func
 def cube(i):
     return i * i * i
+
 
 # function to compute sum of digits in a number
 def get_sum(i):
@@ -22,18 +24,21 @@ def get_sum(i):
         digitSum = digitSum + int(i % 10)
         i = int(i / 10)
     return digitSum
-#adding odd number (in range 1-1000) into list
+
+
+# adding odd number (in range 1-1000) into list
 for i in range(1, 1001):
     if i % 2 != 0:
         cubeslist.append(cube(i))
 print(cubeslist)
-#getting the sum of a numbers (%7)
+
+# getting the sum of a numbers (%7)
 for i in cubeslist:
     if get_sum(i) % 7 == 0:
         Sum7 += get_sum(i)
 print(Sum7)
 
-cubeslist = [i+17 for i in cubeslist]
+cubeslist = [i + 17 for i in cubeslist]
 print(cubeslist)
 for i in cubeslist:
     if get_sum(i) % 7 == 0:
