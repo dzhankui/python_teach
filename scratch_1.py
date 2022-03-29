@@ -11,4 +11,6 @@
 #         print(i, 'процента')
 #     else:
 #         print(i, 'процентов')
-print(91//3)
+a = 9
+p = 'опа'
+print(str(a + p))
