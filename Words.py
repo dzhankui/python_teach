@@ -18,5 +18,6 @@ for i in range(1, 101):
         word = 'процентов'
     if (i % 3 == 0) and (i % 4 == 0) and (i % 5 == 0):
         word = 'процент'
+    elif  #create a condition, that check last digit of a num
 
     print(i, word)

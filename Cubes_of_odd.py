@@ -7,40 +7,27 @@
 #   списка, сумма цифр которых делится нацело на 7.
 # c.Решить задачу под пунктом b, не создавая новый список.
 
-cubeslist = []
-Sum7 = 0
-d = 17
+my_list = []
+for num in range(1, 1001, 2):
+    my_list.append(num ** 3)
+# a
+final_sum = 0
+for num in my_list:
+    check_sum = 0
+    for check_num in str(num):
+        check_sum = ++int(check_num)
+    if check_sum % 7 == 0:
+        final_sum += num
+print(final_sum)
 
-
-# cube computing func
-def cube(i):
-    return i * i * i
-
-
-# function to compute sum of digits in a number
-def get_sum(i):
-    digitSum = 0
-    while i != 0:
-        digitSum = digitSum + int(i % 10)
-        i = int(i / 10)
-    return digitSum
-
-
-# adding odd number (in range 1-1000) into list
-for i in range(1, 1001):
-    if i % 2 != 0:
-        cubeslist.append(cube(i))
-print(cubeslist)
-
-# getting the sum of a numbers (%7)
-for i in cubeslist:
-    if get_sum(i) % 7 == 0:
-        Sum7 += get_sum(i)
-print(Sum7)
-
-cubeslist = [i + 17 for i in cubeslist]
-print(cubeslist)
-for i in cubeslist:
-    if get_sum(i) % 7 == 0:
-        Sum7 += get_sum(i)
-print(Sum7)
+# b+c
+my_list = []
+final_sum = 0
+for num in my_list:
+    num += 17
+    check_sum = 0
+    for check_num in str(num):
+        check_sum = ++int(check_num)
+    if check_sum % 7 == 0:
+        final_sum += num
+print(final_sum)
