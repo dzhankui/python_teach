@@ -19,8 +19,10 @@ plus5 = plus + cut_list[1]
 # print(plus5)
 quotes = '"'
 
+#не создавая новый лист - слишком просто: я тогда создам переменные из каждого элемента my_list
 information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
 print(information)
+
 #тупое обособление кавычками
 # my_list.insert(1, '"')
 # my_list.insert(3, '"')
