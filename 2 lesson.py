@@ -11,10 +11,10 @@ print(type(15**2))
 # и дополнить нулём до двух целочисленных разрядов
 
 my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
-print(my_list.index('+5'))
+# print(my_list.index('+5'))
 cut_list = my_list[8]
 cut_list = my_list[8].split('+', 1)
-print(cut_list)
+# print(cut_list)
 plus = '+'
 quotes = '"'
 plus5 = plus + cut_list[1]
@@ -28,20 +28,20 @@ print(information)
 #3. * (вместо задачи 2) Решить задачу 2 не создавая новый список (как говорят, in place).
 # Эта задача намного серьёзнее, чем может сначала показаться.
 # todo решить задачу
-my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
-print(my_list.index('+5'))
-cut_list = my_list[8]
-cut_list = my_list[8].split('+', 1)
-print(cut_list)
-plus = '+'
-quotes = '"'
-plus5 = plus + cut_list[1]
-# print(plus5)
-quotes = '"'
-
+# my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
+# # print(my_list.index('+5'))
+# cut_list = my_list[8]
+# cut_list = my_list[8].split('+', 1)
+# # print(cut_list)
+# plus = '+'
+# quotes = '"'
+# plus5 = plus + cut_list[1]
+# # print(plus5)
+# quotes = '"'
 #
-information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
-print(information)
+# #
+# information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
+# print(information)
 
 #4. Дан список, содержащий искажённые данные с должностями и именами сотрудников:
 #['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
