@@ -1,33 +1,24 @@
-# 1. Выяснить тип результата выражений:
-print(type(15*3))
-print(type(15/3))
-print(type(15//3))
-print(type(15**2))
-
+# # 1. Выяснить тип результата выражений:
+# print(type(15*3))
+# print(type(15/3))
+# print(type(15//3))
+# print(type(15**2))
+#
 # 2. Дан список:
 # ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 # Необходимо его обработать — обособить каждое целое число (вещественные не трогаем) кавычками
 # (добавить кавычку до и кавычку после элемента списка, являющегося числом)
 # и дополнить нулём до двух целочисленных разрядов
-
-my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
-# print(my_list.index('+5'))
-cut_list = my_list[8]
-cut_list = my_list[8].split('+', 1)
-# print(cut_list)
-plus = '+'
-quotes = '"'
-plus5 = plus + cut_list[1]
-# print(plus5)
-quotes = '"'
-
-#не создавая новый лист - слишком просто: я тогда создам переменные из каждого элемента my_list
-information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
-print(information)
+#
+# my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
+# cut_list = my_list[8].split('+', 1)
+# plus = '+'
+# quotes = '"'
+# plus5 = plus + cut_list[1]
+# information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
+# print(information)
 
 #3. * (вместо задачи 2) Решить задачу 2 не создавая новый список (как говорят, in place).
-# Эта задача намного серьёзнее, чем может сначала показаться.
-# todo решить задачу
 # my_list = ['в ', '5', ' часов ', '17', ' минут ', 'температура ', 'воздуха ', 'была ', '+5', ' градусов']
 # # print(my_list.index('+5'))
 # cut_list = my_list[8]
@@ -36,19 +27,57 @@ print(information)
 # plus = '+'
 # quotes = '"'
 # plus5 = plus + cut_list[1]
-# # print(plus5)
-# quotes = '"'
-#
-# #
+# print(plus5)
 # information = f'в {quotes}{my_list[1]:0>2}{quotes} часов {quotes}{my_list[3]}{quotes} минут температура воздуха была {quotes}{plus}{cut_list[1]:0>2}{quotes} градусов'
 # print(information)
+#еще вариант (с лишними пробелами):
+# my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+# new_list = []
+# for elem in my_list:
+#     if elem.isdigit():
+#         new_list.extend(['"', f'{int(elem):02}', '"'])
+#     elif (elem.startswith('+') or elem.startswith('-')) and elem[1:].isdigit():
+#         new_list.extend(['"', f'{elem[0]}{int(elem[1:]):02}', '"'])
+#     else: new_list.append(elem)
+# out_info = ' '.join(new_list)
+# print(out_info)
+#
+# #delete whitespaces:
+# symbol_idxs = []
+# for idx, letter in enumerate(out_info):
+#     if letter == '"':
+#         symbol_idxs.append(idx)
+#
+# #logic to find and remove indexes
+# for idx in range(len(symbol_idxs)):
+#     if idx % 2 == 0:
+#         symbol_idxs[idx] = symbol_idxs[idx] + 1
+#     else:
+#         symbol_idxs[idx] = symbol_idxs[idx] - 1
+# for del_idx in reversed(symbol_idxs):
+#     out_info = out_info[:del_idx] + out_info[del_idx + 1:]
+#
+# 3. * (вместо задачи 2) Решить задачу 2 не создавая новый список (как говорят, in place).
+# Эта задача намного серьёзнее, чем может сначала показаться.
 
-#4. Дан список, содержащий искажённые данные с должностями и именами сотрудников:
-#['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
-# Известно, что имя сотрудника всегда в конце строки. Сформировать и вывести на экран фразы вида: 'Привет, Игорь!'
-# Подумать, как получить имена сотрудников из элементов списка, как привести их к корректному виду.
-# Можно ли при этом не создавать новый список?
 
+# 4. Дан список, содержащий искажённые данные с должностями и именами сотрудников:
+# ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
+# a. Известно, что имя сотрудника всегда в конце строки. Сформировать и вывести на экран фразы вида: 'Привет, Игорь!'
+# b. Подумать, как получить имена сотрудников из элементов списка, как привести их к корректному виду.
+# c. Можно ли при этом не создавать новый список?
+
+# given_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
+#
+# print(len(given_list))
+# for item in given_list:
+#     arr = item.split(' ')
+#     last_index = len(arr) - 1
+#     print(f"Hello, comrad {arr[last_index].title()}")
+#А тут значительно короче, без создания дополнительного списка и с обращением сразу к последнему элементу в листе:
+# given_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
+# for position in given_list:
+#     print('Hello,', position .split()[-1].title())
 # 5. Создать список, содержащий цены на товары (10–20 товаров), например:
 # [57.8, 46.51, 97, ...]
 # Вывести на экран эти цены через запятую в одну строку, цена должна отображаться в виде <r> руб <kk> коп (например «5 руб 04 коп»).
@@ -59,31 +88,35 @@ print(information)
 # Создать новый список, содержащий те же цены, но отсортированные по убыванию.
 # Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
 
-#todo split '5' and '+' done
-#todo add zero to 5 and 5 to get 05
-#todo add '+' to the second 05 => +05
-#todo add " before and after numbers
-
-
-
-#тупое обособление кавычками
-# my_list.insert(1, '"')
-# my_list.insert(3, '"')
-# my_list.insert(5, '"')
-# my_list.insert(7, '"')
-# my_list.insert(12, '"')
-# my_list.insert(14, '"')
-
-# не менее тупо, но с привязкой к индексу элемента
-# my_list.insert(my_list.index('+5'), '"')
-# my_list.insert(my_list.index('+5') + 1, '"')
-# my_list.insert(my_list.index('5'), '"')
-# my_list.insert(my_list.index('5') + 1, '"')
-# my_list.insert(my_list.index('17'), '"')
-# my_list.insert(my_list.index('17') + 1, '"')
-# print(my_list)
-
-# print(''.join(my_list))
-
-
+import random
+r = ' руб '
+kk = ' коп '
+cost = []
+#заполили массив случайными числами
+for i in range(0, 20):
+    cost.append(round(random.uniform(1, 100), 2))
+cost.sort()         #отсортировали по возратанию
+print(cost)
+#выводим красиво рубли и копейки
+for i in range(0, 20):
+    tmp = f"{cost[i]:.2f}"  #приводим все цифры к нужному формату и кладем в лист
+    arr = tmp.split('.')    #сплитаем по точке
+    cost_str = f"{arr[0]}{r}{arr[1]}{kk}"
+    print(cost_str)
+print(id(cost))
+cost.reverse() #реверснем созданный список
+#и повторим красивый вывод рублей и копеек:
+for i in range(0, 20):
+    tmp = f"{cost[i]:.2f}"
+    arr = tmp.split('.')
+    cost_str = f"{arr[0]}{r}{arr[1]}{kk}"
+    print(cost_str)
+#вывод цен 5 самых дорогих товаров:
+for i in range(0, 5):
+    #cost.sort()
+    arr = str(cost[i]).split('.')
+    cost_str = f" {int(cost[i])}{r}{arr[1]}{kk}"
+    print(cost_str)
+print(id(cost))
+#print(int(cost[5]))
 
