@@ -92,7 +92,7 @@ import random
 r = ' руб '
 kk = ' коп '
 cost = []
-#заполили массив случайными числами
+#заполнили массив случайными числами
 for i in range(0, 20):
     cost.append(round(random.uniform(1, 100), 2))
 cost.sort()         #отсортировали по возратанию

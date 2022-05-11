@@ -63,11 +63,25 @@
 #     print(val)
 # ====================================================
 #create sequence of strings
-cities = ('Paris', 'Athens', 'Madrid')
+# cities = ('Paris', 'Athens', 'madrid')
+# place = ['Europe', 'Angora', 'Romania']
+# #create the dictionary, `my_dictionary`, using the fromkeys() method
+# my_dictionary = dict.fromkeys(cities, place)
+#
+# print(my_dictionary)
+# {'Paris': None, 'Athens': None, 'Madrid': None}
+# =====================================================
+# my_string = "d gAs"
+# crop_string = my_string.replace(' ', '')
+# print(crop_string)
+# =====================================================
+# def show_user(name, *args, **kwargs):
+#     print(f'Пользователь {name}')
+#     print(f'args: {args}')
+#     print(f'kwargs: {kwargs}')
+# show_user('Иван', 'Иванов', age=25)
+# ======================================================
+my_dict = {1: 2, 3: 4, 5: 6, 7: 8, 9: 10}
+print(my_dict.keys())
 
-#create the dictionary, `my_dictionary`, using the fromkeys() method
-my_dictionary = dict.fromkeys(cities)
 
-print(my_dictionary)
-
-#{'Paris': None, 'Athens': None, 'Madrid': None}
