@@ -26,6 +26,7 @@ import random
 
 from numpy.core.defchararray import capitalize, title
 
+
 # def num_translate(key):
 #     a = {
 #         'zero': 'ноль',
@@ -65,11 +66,10 @@ from numpy.core.defchararray import capitalize, title
 # }
 # Подумайте: полезен ли будет вам оператор распаковки? Как поступить, если потребуется сортировка по ключам?
 # Можно ли использовать словарь в этом случае?
+
 # names = input('Введите имена сотрудников через запятую (можно с маленькой буквы и без пробелов)')
-# # names = 'tom,Todd,gAs, saM,fReak'
-#
-#
-# def thesaurus(names): #применяем ф-цию распаковки, которая позволит нашей ф-ии работать с неизвестным числом позиционных эл-ов
+# names = 'tom,Todd,gAs, saM,fReak'
+# def thesaurus(names):  # применяем ф-цию распаковки, которая позволит нашей ф-ии работать с неизвестным числом позиционных эл-ов
 #     """функция в качестве аргументов принимает имена
 #     сотрудников и возвращает словарь,
 #     где ключи - это первые буквы имен, а значения - списки"""
@@ -77,15 +77,17 @@ from numpy.core.defchararray import capitalize, title
 #     names = names.title()  # Делаем каждый элемент с заглавной буквы, остальные буквы - строчные
 #     list_names = names.split(',')  # Получаем список имен, разделив строку по запятой на массив эл-ов
 #     dictnames = {}
-#     for name in list_names: #
-#         first_letter = name[0: 1] #
+#     for name in list_names:  #
+#         first_letter = name[0: 1]  #
 #         if first_letter in dictnames:
 #             dictnames.get(first_letter).append(name)
 #         else:
 #             dictnames.setdefault(first_letter, [name])
 #     return dictnames
 #
+#
 # print('dictnames', thesaurus(names))
+
 # ===========================================================
 # todo
 # Написать функцию thesaurus_adv(),
@@ -102,20 +104,20 @@ from numpy.core.defchararray import capitalize, title
 # Как поступить, если потребуется сортировка по ключам?
 
 # name_surname = input('введите имя и фамилию через запятую')
-name_surname = "Иван сергеев, инНа Серова,  ПеТр Алексеев, Илья Иванов,Анна Савельева"
+# name_surname = "Иван сергеев, инНа Серова,  ПеТр Алексеев, Илья Иванов,Анна Савельева"
 
 
-def thesaurus_adv(name_surname, **kwargs):
-    """долбануться, какая важная функция, она умеет делать ничего"""
-    print(type(name_surname))
-    name_surname = name_surname.replace(' ', '')
-    name_surname = name_surname.title()
-    list_name_surname = name_surname.split(',')
-
-    print(list_name_surname)
-
-
-thesaurus_adv(name_surname)
+# def thesaurus_adv(name_surname, **kwargs):
+#     """долбануться, какая важная функция, она умеет делать ничего"""
+#     print(type(name_surname))
+#     name_surname = name_surname.replace(' ', '')
+#     name_surname = name_surname.title()
+#     list_name_surname = name_surname.split(',')
+#
+#     print(list_name_surname)
+#
+#
+# thesaurus_adv(name_surname)
 # ====================================================================================================
 
 # todo
