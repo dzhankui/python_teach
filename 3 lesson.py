@@ -87,7 +87,16 @@ from numpy.core.defchararray import capitalize, title
 #
 #
 # print('dictnames', thesaurus(names))
-
+# ========Version 2=============================================
+# def thesaurus(*names):
+#     out_dict = dict()
+#     for name in names:
+#         out_dict.setdefault(name[0], [])
+#         out_dict[name[0]].append(name)
+#     return out_dict
+#
+#
+# print(thesaurus("rjym", "rtfg", "fuck", "ShiT"))
 # ===========================================================
 # todo
 # Написать функцию thesaurus_adv(),
@@ -103,21 +112,25 @@ from numpy.core.defchararray import capitalize, title
 # }
 # Как поступить, если потребуется сортировка по ключам?
 
+# =========================================================================
+
 # name_surname = input('введите имя и фамилию через запятую')
-# name_surname = "Иван сергеев, инНа Серова,  ПеТр Алексеев, Илья Иванов,Анна Савельева"
+# name_surname = "Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов" ,"Анна Савельева"
+
+def thesaurus_adv(*names_surnames,):
+    out_dict = dict()
+    for name in names_surnames:
+        if name[0] is capitalize:
+            out_dict.setdefault(name[0], [])
+        else:
+            name = name.title()
+            out_dict.setdefault(name[0], [])
+        out_dict[name[0]].append(name)
+    return out_dict
 
 
-# def thesaurus_adv(name_surname, **kwargs):
-#     """долбануться, какая важная функция, она умеет делать ничего"""
-#     print(type(name_surname))
-#     name_surname = name_surname.replace(' ', '')
-#     name_surname = name_surname.title()
-#     list_name_surname = name_surname.split(',')
-#
-#     print(list_name_surname)
-#
-#
-# thesaurus_adv(name_surname)
+print(thesaurus_adv("Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов", "Анна Савельева"))
+
 # ====================================================================================================
 
 # todo
