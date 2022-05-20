@@ -117,16 +117,28 @@ from numpy.core.defchararray import capitalize, title
 # name_surname = input('введите имя и фамилию через запятую')
 # name_surname = "Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов" ,"Анна Савельева"
 
-def thesaurus_adv(*names_surnames,):
-    out_dict = dict()
-    for name in names_surnames:
-        if name[0] is capitalize:
-            out_dict.setdefault(name[0], [])
-        else:
-            name = name.title()
-            out_dict.setdefault(name[0], [])
-        out_dict[name[0]].append(name)
+def thesaurus_adv(*names_surnames):
+    out_dict = {}
+    for name_surname in names_surnames:
+        name, surname = name_surname.split()
+        out_dict.setdefault(surname[0], {})
+        out_dict[surname[0]].setdefault(name[0], [])
+        out_dict[surname[0]][name[0]].append(name_surname)
+
+    sorted_dict = {
+        x: out_dict[x]
+        for x in sorted(out_dict)
+    }
+
     return out_dict
+
+    #     if name[0] is capitalize:
+    #         out_dict.setdefault(name[0], [])
+    #     else:
+    #         name = name.title()
+    #         out_dict.setdefault(name[0], [])
+    #     out_dict[name[0]].append(name)
+    # return out_dict
 
 
 print(thesaurus_adv("Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов", "Анна Савельева"))

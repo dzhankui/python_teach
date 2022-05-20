@@ -109,7 +109,7 @@
 # print(result)
 # ==================================вариант 2=======================================
 s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  lmu ynnjw ml rfc spj."
-#s = "http://www.pythonchallenge.com/pc/def/map.html"
+# s = "http://www.pythonchallenge.com/pc/def/map.html"
 o = ""
 for x in s:
     if ord('a') <= ord(x) <= ord('z'):
@@ -120,6 +120,14 @@ print(o)
 
 url = "http://www.pythonchallenge.com/pcc/def/map.html"
 rslt_url = ''
-for x in url:
-    rslt_url += (chr(ord(x) if ord(x)+2 < ord('a') else ord(x)+2 if ord(x)+2 < ord('z') else ord(x)-24))
+for x in s:
+
+    charCode = ord(x)
+    if charCode + 2 < ord('z'):
+        if charCode + 2 >= ord('a'):
+            charCode = ord(x) + 2
+    else:
+        charCode = charCode - 24
+
+    rslt_url += chr(charCode)
 print(rslt_url)
