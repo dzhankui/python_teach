@@ -98,7 +98,6 @@ from numpy.core.defchararray import capitalize, title
 #
 # print(thesaurus("rjym", "rtfg", "fuck", "ShiT"))
 # ===========================================================
-# todo
 # Написать функцию thesaurus_adv(),
 # принимающую в качестве аргументов строки в формате «Имя Фамилия» и возвращающую словарь,
 # в котором ключи — первые буквы фамилий, а значения — словари,
@@ -117,20 +116,20 @@ from numpy.core.defchararray import capitalize, title
 # name_surname = input('введите имя и фамилию через запятую')
 # name_surname = "Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов" ,"Анна Савельева"
 
-def thesaurus_adv(*names_surnames):
-    out_dict = {}
-    for name_surname in names_surnames:
-        name, surname = name_surname.split()
-        out_dict.setdefault(surname[0], {})
-        out_dict[surname[0]].setdefault(name[0], [])
-        out_dict[surname[0]][name[0]].append(name_surname)
-
-    sorted_dict = {
-        x: out_dict[x]
-        for x in sorted(out_dict)
-    }
-
-    return out_dict
+# def thesaurus_adv(*names_surnames):
+#     out_dict = {}
+#     for name_surname in names_surnames:
+#         name, surname = name_surname.split()
+#         out_dict.setdefault(surname[0], {})
+#         out_dict[surname[0]].setdefault(name[0], [])
+#         out_dict[surname[0]][name[0]].append(name_surname)
+#
+#     sorted_dict = {
+#         x: out_dict[x]
+#         for x in sorted(out_dict)
+#     }
+#
+#     return out_dict
 
     #     if name[0] is capitalize:
     #         out_dict.setdefault(name[0], [])
@@ -141,11 +140,10 @@ def thesaurus_adv(*names_surnames):
     # return out_dict
 
 
-print(thesaurus_adv("Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов", "Анна Савельева"))
+# print(thesaurus_adv("Иван сергеев", "инНа Серова", "ПеТр Алексеев", "Илья Иванов", "Анна Савельева"))
 
 # ====================================================================================================
 
-# todo
 # Реализовать функцию get_jokes(), возвращающую n шуток, сформированных из трех случайных слов,
 # взятых из трёх списков (по одному из каждого):
 # Например:
@@ -182,3 +180,5 @@ print(thesaurus_adv("Иван сергеев", "инНа Серова", "ПеТ�
 #
 #
 # get_jokes(input)
+# =====================================================================================================================
+#

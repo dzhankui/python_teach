@@ -108,26 +108,57 @@
 #
 # print(result)
 # ==================================вариант 2=======================================
-s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  lmu ynnjw ml rfc spj."
+# s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  lmu ynnjw ml rfc spj."
 # s = "http://www.pythonchallenge.com/pc/def/map.html"
-o = ""
-for x in s:
-    if ord('a') <= ord(x) <= ord('z'):
-        o += chr((ord(x) + 2 - ord('a')) % 26 + ord('a'))
-    else:
-        o += x
-print(o)
+# o = ""
+# for x in s:
+#     if ord('a') <= ord(x) <= ord('z'):
+#         o += chr((ord(x) + 2 - ord('a')) % 26 + ord('a'))
+#     else:
+#         o += x
+# print(o)
+#
+# url = "http://www.pythonchallenge.com/pcc/def/map.html"
+# rslt_url = ''
+# for x in s:
+#
+#     charCode = ord(x)
+#     if charCode + 2 < ord('z'):
+#         if charCode + 2 >= ord('a'):
+#             charCode = ord(x) + 2
+#     else:
+#         charCode = charCode - 24
+#
+#     rslt_url += chr(charCode)
+# print(rslt_url)
+# ==================================================================
+# def add(a, b):
+#     return a + b
+#
+#
+# def sub(a, b):
+#     return a - b
+#
+#
+# d = {add: sub, sub: add}
+# print(d[add](2, 1))
+# ===========================================================================================
+# print(...) #Ellipsis
+# Катя узнала, что ей для сна надо XX минут.
+# В отличие от Коли, Катя ложится спать после полуночи в HH часов и MM минут.
+# Помогите Кате определить, на какое время ей поставить будильник,
+# чтобы он прозвенел ровно через XX минут после того, как она ляжет спать.
+# На стандартный ввод, каждое в своей строке, подаются значения XX, HH и MM.
+# Гарантируется, что Катя должна проснуться в тот же день, что и заснуть.
+# Программа должна выводить время, на которое нужно поставить будильник: в первой строке часы, во второй — минуты.
+# MinsToSleep = int(input())
+# HourLayDown = int(input())
+# MinsLayDown = int(input())
+#
+# SetMins = (MinsToSleep + MinsLayDown) % 60 #
+# SetHours = (MinsToSleep + MinsLayDown) // 60 + HourLayDown #
+# print(SetHours)
+# print(SetMins)
 
-url = "http://www.pythonchallenge.com/pcc/def/map.html"
-rslt_url = ''
-for x in s:
-
-    charCode = ord(x)
-    if charCode + 2 < ord('z'):
-        if charCode + 2 >= ord('a'):
-            charCode = ord(x) + 2
-    else:
-        charCode = charCode - 24
-
-    rslt_url += chr(charCode)
-print(rslt_url)
+# n % 10 остаток от деления на 10
+# n = n // 10  целочисленное деление (берется только целая часть от деления на число, дробная отбрасывается)
