@@ -162,3 +162,94 @@
 
 # n % 10 остаток от деления на 10
 # n = n // 10  целочисленное деление (берется только целая часть от деления на число, дробная отбрасывается)
+# ============================================================================================================
+# x = 5
+# y = 10
+# print(y > x * x or 2 * x <= y and x < y)
+# ===========================================================================================================
+# a = True
+# b = False
+# print((a and b) or (not a)) and (not b)
+# ===========================================================================================================
+# A = int(input())
+# B = int(input())
+# H = int(input())
+# if B >= H >= A:
+#     print('Это нормально')
+# elif B < H:
+#     print('Пересып')
+# elif H < A:
+#     print('Недосып')
+# ==========================================================================================================
+# year = int(input())
+# if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+#     print('Високосный')
+# else:
+#     print('Обычный')
+# =========================================================================================================
+# from numpy import sqrt
+#
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# p = a + b + c
+# S = sqrt(p * (p - a) * (p - b) * (p - c))
+# print(S)
+# ========================================================================================================
+# from numpy import infty
+# x = int(input())
+# if (-15) < x <= 12 or (14 < x < 17) or (19 <= x < +infty):
+#     print('True')
+# else:
+#     print('False')
+# ========================================================================================================
+# FirstDigit = float(input())
+# SeconDigit = float(input())
+# Operation: str = input()
+# Result = 0
+# if SeconDigit == 0 and (Operation == '/' or Operation == 'div' or Operation == 'mod'):
+#     print('Деление на 0!')
+# elif Operation == '/':
+#     Result = FirstDigit / SeconDigit
+#     print(Result)
+# elif Operation == '*':
+#     Result = FirstDigit * SeconDigit
+#     print(Result)
+# elif Operation == 'mod':
+#     Result = FirstDigit % SeconDigit
+#     print(Result)
+# elif Operation == 'pow':
+#     Result = FirstDigit ** SeconDigit
+#     print(Result)
+# elif Operation == 'div':
+#     Result = FirstDigit // SeconDigit
+#     print(Result)
+# ===========================================================================================================
+from numpy import sqrt
+
+RoomShape = str(input())
+pi = 3.14
+if RoomShape == 'треугольник':
+    Area = 0
+    a = abs(float(input()))
+    b = abs(float(input()))
+    c = abs(float(input()))
+    HalfPerimeter = (a + b + c) / 2
+    if c >= (a + b) or b >= (a + c) or a >= (b + c):
+        print("it is an impossible shape. Screw you! There is no result!")
+    else:
+        Area = sqrt((HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c)))
+        print(Area)
+elif RoomShape == 'прямоугольник':
+    a = abs(float(input()))
+    b = abs(float(input()))
+    Area = a * b
+    print(Area)
+
+elif RoomShape == 'круг':
+    r = abs(float(input()))
+    Area = pi * r ** 2
+    print(Area)
+
+else:
+    print('в названии фигуры ты ошибся')
