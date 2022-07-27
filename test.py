@@ -225,31 +225,108 @@
 #     Result = FirstDigit // SeconDigit
 #     print(Result)
 # ===========================================================================================================
-from numpy import sqrt
+# from numpy import sqrt
+#
+# RoomShape = str(input())
+# pi = 3.14
+# if RoomShape == 'треугольник':
+#     Area = 0
+#     a = abs(float(input()))
+#     b = abs(float(input()))
+#     c = abs(float(input()))
+#     HalfPerimeter = (a + b + c) / 2
+#     if c >= (a + b) or b >= (a + c) or a >= (b + c):
+#         print("it is an impossible shape. Screw you! There is no result!")
+#     else:
+#         Area = sqrt((HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c)))
+#         print(Area)
+# elif RoomShape == 'прямоугольник':
+#     a = abs(float(input()))
+#     b = abs(float(input()))
+#     Area = a * b
+#     print(Area)
+#
+# elif RoomShape == 'круг':
+#     r = abs(float(input()))
+#     Area = pi * r ** 2
+#     print(Area)
+#
+# else:
+#     print('в названии фигуры ты ошибся')
+#     ================================================================
 
-RoomShape = str(input())
-pi = 3.14
-if RoomShape == 'треугольник':
-    Area = 0
-    a = abs(float(input()))
-    b = abs(float(input()))
-    c = abs(float(input()))
-    HalfPerimeter = (a + b + c) / 2
-    if c >= (a + b) or b >= (a + c) or a >= (b + c):
-        print("it is an impossible shape. Screw you! There is no result!")
-    else:
-        Area = sqrt((HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c)))
-        print(Area)
-elif RoomShape == 'прямоугольник':
-    a = abs(float(input()))
-    b = abs(float(input()))
-    Area = a * b
-    print(Area)
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = sorted([a, b, c], reverse=True)
+# print(d[(len(d) - 1)])
+# print(d[0])
+# print(d[1])
 
-elif RoomShape == 'круг':
-    r = abs(float(input()))
-    Area = pi * r ** 2
-    print(Area)
+#   ===========================================================================
+# todo решить в т.ч. при помощи str, обрабатывая символы строки (изначально введенное число - строка)
+# В институте биоинформатики по офису передвигается робот. Недавно студенты из группы программистов написали для него программу,
+# по которой робот, когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".#
+# Для того, чтобы это звучало правильно, для каждого nn нужно использовать верное окончание слова.#
+# Напишите программу, считывающую с пользовательского ввода целое число nn (неотрицательное),
+# выводящее это число в консоль вместе с правильным образом изменённым словом "программист",
+# для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
+# # В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, как минимум до 1000 человек.
 
-else:
-    print('в названии фигуры ты ошибся')
+#           ========= solvation using numbers =========
+# p = 'программист'
+# o = 'ов'
+# a = 'а'
+#
+# InputNumber = abs(int(input()))
+# print(InputNumber // 10)
+# print(InputNumber % 10)
+# #    =========    программист     =========
+# if InputNumber == 1 or (InputNumber % 10 == 1 and 981 >= InputNumber > 11):
+#     print(InputNumber, p)
+#
+#
+# #    =========    программиста    =========
+# elif InputNumber // 100 == 0 or (1 < InputNumber % 10 < 5 and InputNumber % 11 != 0):
+#     print(InputNumber, p + a)
+#
+# #    =========    программистов     =========
+# # todo for 11, 12, 13, 14 & etc + x00
+# elif InputNumber % 11 == 0 and InputNumber
+#
+# #  11
+# InputNumber % 10 == 1
+# InputNumber // 10 ==1
+# # xx1
+# (InputNumber % 100) % 11 == 0
+# #  12
+# (InputNumber % 100) % (3 and 4) == 0
+
+
+# elif 1 < (InputNumber % 10) <= 6 and InputNumber // 10 == (1 or 2 or 3):
+#     print(InputNumber, p + o)
+
+#    =========    реализовать в виде вложенных условий, типа, принцип "отсева" введенного значения    =========
+#  выяснить, лучшее ли это решение алгоритмически?
+# if InputNumber % 100 == 0:
+#     if InputNumber % 10 ==0:
+#         if InputNumber % (2 or )
+
+#   ===================     swapinGame   ======================
+# Write a function that takes in a string of one or more words, and returns the same string,
+# but with all five or more letter words reversed (Just like the name of this Kata).
+# Strings passed in will consist of only letters and spaces.
+# Spaces will be included only when more than one word is present.
+
+words = input()
+wordSplit = words.split()
+
+
+def reverse(*args):
+    for word in wordSplit:
+        if len(word) >= 5:
+            wordSplit[wordSplit.index(word)] = word[::-1]
+            print(wordSplit)
+
+
+print(reverse(words))
