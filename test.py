@@ -320,13 +320,14 @@
 
 words = input()
 wordSplit = words.split()
-
+a = ''
 
 def reverse(*args):
     for word in wordSplit:
         if len(word) >= 5:
             wordSplit[wordSplit.index(word)] = word[::-1]
-            print(wordSplit)
+
 
 
 print(reverse(words))
+
