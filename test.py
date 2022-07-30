@@ -354,8 +354,11 @@
 # Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
 # For empty output return an empty list.
 def ordered_count(inp):
+    out_list = []
     char_counter = 0
     inp = input()
-    for i in inp:
-        if inp[i] ==
+    inpSplitted = inp.split()
+    for i in inpSplitted:
+        if inpSplitted[i] == char:
+            char_counter += 1
     pass
