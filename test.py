@@ -317,17 +317,45 @@
 # but with all five or more letter words reversed (Just like the name of this Kata).
 # Strings passed in will consist of only letters and spaces.
 # Spaces will be included only when more than one word is present.
+# words = input()
+# wordSplit = words.split()
+#
+#
+# def reverse(*args):
+#     for word in wordSplit:
+#         if len(word) >= 5:
+#             wordSplit[wordSplit.index(word)] = word[::-1]
+#     print(' '.join(map(str, wordSplit)))
+#
+#
+# reverse(words)
+# ===================================   Count by X  ==============================
+# https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/python
+# Create a function with two arguments that will return an array of the first (n) multiples of (x).
+# Assume both the given number and the number of times to count will be positive numbers greater than 0.
+# Return the results as an array (or list in Python, Haskell or Elixir).
 
-words = input()
-wordSplit = words.split()
-a = ''
+# def count_by(x, n):
+#     arr = []
+#     s = 0
+#     if x != 0 or n != 0:
+#         for i in range(x, (x * n) + 1, x):
+#             s += x
+#             arr.append(s)
+#
+#         return arr
+#     else:
+#         print('ошибка! 0 вводить нельзя!')
+#
+#
+# print(count_by(1, 10))
 
-def reverse(*args):
-    for word in wordSplit:
-        if len(word) >= 5:
-            wordSplit[wordSplit.index(word)] = word[::-1]
-
-
-
-print(reverse(words))
-
+# =================================== Ordered Count of Characters ==============================
+# Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
+# For empty output return an empty list.
+def ordered_count(inp):
+    char_counter = 0
+    inp = input()
+    for i in inp:
+        if inp[i] ==
+    pass
