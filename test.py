@@ -351,14 +351,42 @@
 # print(count_by(1, 10))
 
 # =================================== Ordered Count of Characters ==============================
+# https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
 # Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
 # For empty output return an empty list.
-def ordered_count(inp):
-    out_list = []
-    char_counter = 0
+
+def ordered_count(*args):
     inp = input()
-    inpSplitted = inp.split()
-    for i in inpSplitted:
-        if inpSplitted[i] == char:
-            char_counter += 1
-    pass
+    CharList = []
+    CharCount = 0
+    CharListWcount = []
+    for char in inp:
+        CharList.append(char)
+        if char in CharList:
+            CharCount += 1
+
+    print(CharList)
+
+
+ordered_count("abracadabra")
+
+# ==============================================
+"""Гоша придумал новый способ хранения текстов.
+Один текст он хранит в двух документах. В одном — каждый третий символ
+(они записаны слитно), а в другом — все остальные.
+Дана строка. Выведи часть текста в том виде, как она хранится у Гоши в первом документе: каждый третий символ строки."""
+
+# text = 'Один текст он хранит в двух документах. В одном — каждый третий символ'
+# third = ''
+# other = ''
+# text = text.replace(' ', '')
+# for i in range(2, len(text), 3):
+#     third += text[i]
+#
+# print(third) # иетхнвуомт.дмаыриио
+# for i in range(0, (len(third))):
+#     if third[i] in text:
+#         text = text.replace(third[i], '')
+#
+# print(text) #ОкскВ—кжййсл
+# ============================================      ==================================================
