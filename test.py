@@ -354,21 +354,25 @@
 # https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
 # Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
 # For empty output return an empty list.
+inp = input()
+
 
 def ordered_count(*args):
-    inp = input()
     CharList = []
     CharCount = 0
     CharListWcount = []
+    List_Of_Tuples_Of_Char_W_Count = []
     for char in inp:
         CharList.append(char)
-        if char in CharList:
+    for char in CharList:
+        if char in inp:
             CharCount += 1
 
     print(CharList)
+    print(CharCount)
 
 
-ordered_count("abracadabra")
+ordered_count(inp)
 
 # ==============================================
 """Гоша придумал новый способ хранения текстов.
@@ -383,10 +387,11 @@ ordered_count("abracadabra")
 # for i in range(2, len(text), 3):
 #     third += text[i]
 #
-# print(third) # иетхнвуомт.дмаыриио
+# print(third)
+#
 # for i in range(0, (len(third))):
 #     if third[i] in text:
 #         text = text.replace(third[i], '')
 #
-# print(text) #ОкскВ—кжййсл
+# print(text)
 # ============================================      ==================================================
