@@ -85,28 +85,28 @@
 # print(sorted(my_dict.keys()))
 # ======================================================
 
-# def split(str):
-#     return [char for char in str]
-#
-#
-# result = ''
-# # str = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
-# str = "g fmnc wms bgblr rpylqjyrc gr zw fylb." \
-#       "rfyrq ufyr amknsrcpq ypc dmp. \
-#       bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. \
-#       sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
-# # str = "pythonchallenge.com/pc/def/map.html"
-# for ch in str:
-#     if ch == ' ' or ch == '.' or ch == "'" or ch == '(' or ch == ')' or ch == '/':
-#         result += ch
-#     elif ch == 'y':
-#         result += 'a'
-#     elif ch == 'z':
-#         result += 'b'
-#     else:
-#         result += chr(ord(ch) + 2)
-#
-# print(result)
+def split(str):
+    return [char for char in str]
+
+
+result = ''
+# str = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+str = "g fmnc wms bgblr rpylqjyrc gr zw fylb." \
+      "rfyrq ufyr amknsrcpq ypc dmp. \
+      bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. \
+      sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+# str = "pythonchallenge.com/pc/def/map.html"
+for ch in str:
+    if ch == ' ' or ch == '.' or ch == "'" or ch == '(' or ch == ')' or ch == '/':
+        result += ch
+    elif ch == 'y':
+        result += 'a'
+    elif ch == 'z':
+        result += 'b'
+    else:
+        result += chr(ord(ch) + 2)
+
+print(result)
 # ==================================вариант 2=======================================
 # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  lmu ynnjw ml rfc spj."
 # s = "http://www.pythonchallenge.com/pc/def/map.html"
@@ -354,6 +354,9 @@
 # https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
 # Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
 # For empty output return an empty list.
+# example:
+# ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
+
 inp = input()
 
 
@@ -382,7 +385,7 @@ ordered_count(inp)
 
 # text = 'Один текст он хранит в двух документах. В одном — каждый третий символ'
 # third = ''
-# other = ''
+#
 # text = text.replace(' ', '')
 # for i in range(2, len(text), 3):
 #     third += text[i]
