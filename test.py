@@ -85,28 +85,28 @@
 # print(sorted(my_dict.keys()))
 # ======================================================
 
-def split(str):
-    return [char for char in str]
-
-
-result = ''
+# def split(str):
+#     return [char for char in str]
+#
+#
+# result = ''
 # str = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
-str = "g fmnc wms bgblr rpylqjyrc gr zw fylb." \
-      "rfyrq ufyr amknsrcpq ypc dmp. \
-      bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. \
-      sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+# str = "g fmnc wms bgblr rpylqjyrc gr zw fylb." \
+#       "rfyrq ufyr amknsrcpq ypc dmp. \
+#       bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. \
+#       sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
 # str = "pythonchallenge.com/pc/def/map.html"
-for ch in str:
-    if ch == ' ' or ch == '.' or ch == "'" or ch == '(' or ch == ')' or ch == '/':
-        result += ch
-    elif ch == 'y':
-        result += 'a'
-    elif ch == 'z':
-        result += 'b'
-    else:
-        result += chr(ord(ch) + 2)
-
-print(result)
+# for ch in str:
+#     if ch == ' ' or ch == '.' or ch == "'" or ch == '(' or ch == ')' or ch == '/':
+#         result += ch
+#     elif ch == 'y':
+#         result += 'a'
+#     elif ch == 'z':
+#         result += 'b'
+#     else:
+#         result += chr(ord(ch) + 2)
+#
+# print(result)
 # ==================================вариант 2=======================================
 # s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  lmu ynnjw ml rfc spj."
 # s = "http://www.pythonchallenge.com/pc/def/map.html"
@@ -357,25 +357,25 @@ print(result)
 # example:
 # ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
 
-inp = input()
+# inp = input()
 
 
-def ordered_count(*args):
-    CharList = []
-    CharCount = 0
-    CharListWcount = []
-    List_Of_Tuples_Of_Char_W_Count = []
-    for char in inp:
-        CharList.append(char)
-    for char in CharList:
-        if char in inp:
-            CharCount += 1
+# def ordered_count(*args):
+#     CharList = []
+#     CharCount = 0
+#     CharListWcount = []
+#     List_Of_Tuples_Of_Char_W_Count = []
+#     for char in inp:
+#         CharList.append(char)
+#     for char in CharList:
+#         if char in inp:
+#             CharCount += 1
+#
+#     print(CharList)
+#     print(CharCount)
 
-    print(CharList)
-    print(CharCount)
 
-
-ordered_count(inp)
+# ordered_count(inp)
 
 # ==============================================
 """Гоша придумал новый способ хранения текстов.
@@ -398,3 +398,34 @@ ordered_count(inp)
 #
 # print(text)
 # ============================================      ==================================================
+# Creating a list of integers:
+# integers = list(range(10))
+# print(f'* List: {integers}')
+#
+# # Creating a tuple of integers:
+# numbers = tuple(integers)
+# print(f'* Tuple: {numbers}')
+# # Creating dictionary:
+# items = [('zero', 0), ('one', 1), ('two', 2)]
+# words = dict(items)
+# print(f'* Dict: {words}')
+# # element of a dictionary:
+# print(words['zero'])
+# print(words['one'])
+# print(words['two'])
+# # Creating a set:
+# evens = (-2, 4, 2, 0, 2, -4, 4)
+# unique_evens = set(evens)
+# print(f'* Set: {unique_evens}')
+# =======================================================
+# list to the array numpy:
+import numpy as np
+import pandas as pd
+
+numbers = [1, 2, 3, 4, 5, 6]
+num_array = np.array(numbers)
+print(f'* Numpy Array:', num_array, '\n')
+# list to pd Series
+names = ['joe', 'pit', 'sam']
+names_series = pd.Series(names)
+print('* pd Series: \n', names_series, '\n')
