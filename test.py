@@ -358,78 +358,54 @@ For empty output return an empty list.
 example:
 ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
 """
-
-inp = input()
+# =================================================
+arr = ['d', 'f', 's', 'd']
 
 
 def ord_count(*args):
-    CharList = []
-    CharCount = 0
-    CharListWcount = []
-    List_Of_Tuples_Of_Char_W_Count = []
-    for char in inp:
-        CharList.append(char)
+    chars = {}
+    for i in arr:
+        chars[i] = chars.get(i, 0) + 1  # получаем {'d': 2, 'f': 1, 's': 1}
+    print(chars)
 
 
-
-
-
-ord_count(inp)
+ord_count(arr)
 
 # ==============================================
-"""Гоша придумал новый способ хранения текстов.
-Один текст он хранит в двух документах. В одном — каждый третий символ
-(они записаны слитно), а в другом — все остальные.
-Дана строка. Выведи часть текста в том виде, как она хранится у Гоши в первом документе: каждый третий символ строки."""
-from ipykernel import iostream
 
-# text = 'Один текст он хранит в двух документах. В одном — каждый третий символ'
-# third = ''
-#
-# text = text.replace(' ', '')
-# for i in range(2, len(text), 3):
-#     third += text[i]
-#
-# print(third)
-#
-# for i in range(0, (len(third))):
-#     if third[i] in text:
-#         text = text.replace(third[i], '')
-#
-# print(text)
 # ============================================      ==================================================
-# Creating a list of integers:
+"""Creating a list of integers:"""
 # integers = list(range(10))
 # print(f'* List: {integers}')
 #
-# # Creating a tuple of integers:
+"""Creating a tuple of integers:"""
 # numbers = tuple(integers)
 # print(f'* Tuple: {numbers}')
-# # Creating dictionary:
+"""Creating dictionary:"""
 # items = [('zero', 0), ('one', 1), ('two', 2)]
 # words = dict(items)
 # print(f'* Dict: {words}')
-# # element of a dictionary:
+"""element of a dictionary:"""
 # print(words['zero'])
 # print(words['one'])
 # print(words['two'])
-# # Creating a set:
+"""Creating a set:"""
 # evens = (-2, 4, 2, 0, 2, -4, 4)
 # unique_evens = set(evens)
 # print(f'* Set: {unique_evens}')
 # =======================================================
-# list --> to array numpy:
+"""list --> to array numpy:"""
 # import numpy as np
 # import pandas as pd
 #
 # numbers = [1, 2, 3, 4, 5, 6]
 # num_array = np.array(numbers)
 # print(f'* Numpy Array:', num_array, '\n')
-# # list --> pd Series:
+"""list --> pd Series:"""
 # names = ['joe', 'pit', 'sam']
 # names_series = pd.Series(names)
 # print('* pd Series: \n', names_series, '\n')
-# # dictionary --> to data frame:
+"""dictionary --> to data frame:"""
 # grades = {'name': names, 'grade': [99, 100, 98]}
 # grades_df = pd.DataFrame(grades)
 # print('* pd DataFrame:\n', grades_df)
@@ -438,15 +414,15 @@ from ipykernel import iostream
 
 # numbers = list(range(-3, 4))
 # print(f'initial iterable {numbers}')
-# списки:
+"""списки:"""
 # [expression for item in iterable if optional_condition]:
 # squares_list = [x*x for x in numbers]
 # print(f'* listcomp: {squares_list}')
-# словари:
+"""словари:"""
 # {key_exp: value_expr for item in iterable if optinal_condition}:
 # squares_dict = {x: x*x for x in numbers if x % 2 == 0}
 # print(f'* dictcomp: {squares_dict}')
-# множества:
+"""множества:"""
 # {expression for item in iterable if optional_condition}:
 # squares_set = {x*x for x in numbers}
 # print(f'* setcomp: {squares_set}')
@@ -463,7 +439,7 @@ from ipykernel import iostream
 # a = ['cpp', 'go', 'php', 'js', 'java']
 # print(sorted(a))
 # print(''.split(' '))
-# ======================= подсчет частоты встречи слов в предложении ===========================
+# ======================= подсчет числа раз встречи слов в предложении ===========================
 """Для каждого слова из введенной строки программа выводит одно целое число — количество повторов этого слова 
 в тексте с учетом позиции и регистра. Числа выводятся на одной строке, через пробел."""
 # my_str = 'прием Хьюстон Хьюстон как слышно прием меня слышно прием хьюстон Хьюстон у нас проблема'
