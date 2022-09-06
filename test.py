@@ -351,31 +351,30 @@
 # print(count_by(1, 10))
 
 # =================================== Ordered Count of Characters ==============================
-# https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
-# Count the number of occurrences of each character and return it as a list of tuples in order of appearance.
-# For empty output return an empty list.
-# example:
-# ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
+"""https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
+Input --> string. Count the number of occurrences of each character and return it
+as a list of tuples in order of appearance.
+For empty output return an empty list.
+example:
+ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
+"""
 
-# inp = input()
-
-
-# def ordered_count(*args):
-#     CharList = []
-#     CharCount = 0
-#     CharListWcount = []
-#     List_Of_Tuples_Of_Char_W_Count = []
-#     for char in inp:
-#         CharList.append(char)
-#     for char in CharList:
-#         if char in inp:
-#             CharCount += 1
-#
-#     print(CharList)
-#     print(CharCount)
+inp = input()
 
 
-# ordered_count(inp)
+def ord_count(*args):
+    CharList = []
+    CharCount = 0
+    CharListWcount = []
+    List_Of_Tuples_Of_Char_W_Count = []
+    for char in inp:
+        CharList.append(char)
+
+
+
+
+
+ord_count(inp)
 
 # ==============================================
 """Гоша придумал новый способ хранения текстов.
@@ -474,6 +473,20 @@ from ipykernel import iostream
 #     d[i] = d.get(i, 0) + 1
 #     print(d[i], end=' ')
 # ====================================================
-
+'''Complete the function that accepts a string parameter, 
+and reverses each word in the string. All spaces in the string should be retained.'''
+# def revercing(*args):
+#     for i in inp:
 
 # =====================================================================================
+'''https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/python
+You probably know the "like" system from Facebook and other pages. 
+People can "like" blog posts, pictures or other items. 
+We want to create the text that should be displayed next to such an item.
+Implement the function which takes an array containing the names of people that like an item. 
+It must return the display text as shown in the examples:
+[]        -->  "no one likes this"
+["Peter"] -->  "Peter likes this"
+'''
+# def LikeNames (*args):
+#     if i in
