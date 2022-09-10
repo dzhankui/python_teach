@@ -350,29 +350,6 @@
 #
 # print(count_by(1, 10))
 
-# =================================== Ordered Count of Characters ==============================
-"""https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
-Input --> string. Count the number of occurrences of each character and return it
-as a list of tuples in order of appearance.
-For empty output return an empty list.
-example:
-ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
-"""
-# =================================================
-arr = ['d', 'f', 's', 'd']
-
-
-def ord_count(*args):
-    chars = {}
-    for i in arr:
-        chars[i] = chars.get(i, 0) + 1  # получаем {'d': 2, 'f': 1, 's': 1}
-    print(chars)
-
-
-ord_count(arr)
-
-# ==============================================
-
 # ============================================      ==================================================
 """Creating a list of integers:"""
 # integers = list(range(10))
@@ -466,3 +443,48 @@ It must return the display text as shown in the examples:
 '''
 # def LikeNames (*args):
 #     if i in
+
+
+
+# =================================== Ordered Count of Characters ==============================
+"""https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
+Input --> string. Count the number of occurrences of each character and return it
+as a list of tuples in order of appearance.
+For empty output return an empty list.
+example:
+ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1)]
+"""
+#
+# inp = input()
+#
+#
+# def ordered_count(*args):
+#     chars = {}
+#     my_list = []
+#     for i in inp:
+#         chars[i] = chars.get(i, 0) + 1  # получаем {'d': 2, 'f': 1, 's': 1}
+#     for i in chars:
+#
+#     print(my_list)
+#
+#
+# ordered_count(inp)
+# ====================================  алгоритмы и структура данных  ==========================================
+"""Вводится любое число. 
+Выяснить, есть ли среди чисел (т.е. в промежутке от 0 до введенного числа) кратные 10"""
+# Yep = False
+# inp = int(input())
+# for i in range(inp-9):
+#     Yep = (i % 10 == 0 or Yep)
+#
+# print(Yep, amount10)
+
+"""Вводится любое трехзначное число. 
+Найти, посчитать, сколько в промежутке от 0 до этого числа чисел, кратных 10"""
+inp = int(input())
+amount10 = 0
+for i in range(inp-9):
+    if i % 10 == 0:
+        amount10 += 1
+
+print(amount10)
