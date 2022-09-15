@@ -445,7 +445,6 @@ It must return the display text as shown in the examples:
 #     if i in
 
 
-
 # =================================== Ordered Count of Characters ==============================
 """https://www.codewars.com/kata/57a6633153ba33189e000074/train/python
 Input --> string. Count the number of occurrences of each character and return it
@@ -478,13 +477,252 @@ ordered_count("abracadabra") == [('a', 5), ('b', 2), ('r', 2), ('c', 1), ('d', 1
 #     Yep = (i % 10 == 0 or Yep)
 #
 # print(Yep, amount10)
-
+#
+# ===================================
 """Вводится любое трехзначное число. 
 Найти, посчитать, сколько в промежутке от 0 до этого числа чисел, кратных 10"""
-inp = int(input())
-amount10 = 0
-for i in range(inp-9):
-    if i % 10 == 0:
-        amount10 += 1
+# inp = int(input())
+# amount10 = 0
+# for i in range(inp-9):
+#     if i % 10 == 0:
+#         amount10 += 1
+#
+# print(amount10)
+# =================================================
+'''дан список, найти из списка 2 числа, в сумме дающие k'''
+# k = 7
+# arr = []
+# pop_arr = []
+# arr = range(6)
+# # rev_arr = reversed(arr)
+# print(range(6))
+# print(reversed(arr))
+# for i in range(0, len(arr)):
+#     if (arr[i] + rev_arr[i]) == k or arr[i] + rev_arr[i]) or :
+#         pop_arr.append(arr[i])
+#         pop_arr.append(arr[i + 1])
+# print(pop_arr)
+# ================  Make a simple plot  ================================
+# https://pybit.es/articles/terminal-plotting-with-plotext/
+from collections import Counter
+from datetime import date
 
-print(amount10)
+from dateutil.parser import parse
+import plotext as plt
+import requests
+
+#
+# API_URL = "https://codechalleng.es/api/articles/"
+# START_YEAR = 2017
+# THIS_YEAR = date.today().year
+# THIS_MONTH = date.today().month
+# MONTH_RANGE = range(1, 13)
+#
+#
+# def _create_yymm_range():
+#     for year in range(START_YEAR, THIS_YEAR + 1):
+#         for month in MONTH_RANGE:
+#             yield f"{year}-{str(month).zfill(2)}"
+#             if year == THIS_YEAR and month == THIS_MONTH:
+#                 break
+#
+#
+# def get_articles_per_month(url=API_URL):
+#     ym_range = _create_yymm_range()
+#     cnt = Counter({ym: 0 for ym in ym_range})
+#     data = requests.get(API_URL)
+#     for row in data.json():
+#         dt = parse(row["publish_date"])
+#         if dt.year < START_YEAR:
+#             continue
+#         ym = dt.strftime("%Y-%m")
+#         cnt[ym] += 1
+#     return cnt
+#
+#
+# def show_plot(data):
+#     labels, values = zip(*data.items())
+#     plt.bar(labels, values)
+#     plt.title("Pybites articles published per month")
+#     plt.show()
+#
+#
+# if __name__ == "__main__":
+#     data = get_articles_per_month()
+#     show_plot(data)
+# ============================================
+
+# today = input("what day is it today?")
+# x = "Yep!" if today == "thursday" else "Nope"
+# print(x)
+
+# choice = input("кетчуп или майонез: ")
+# price = 10 if choice == "кетчуп" else 12
+# print(price)
+# =================================================
+random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "John", "Sinji"]
+
+# m_names = []
+# for name in random_names:
+#     if name[0] == "J":
+#         m_names.append(name)
+# print(m_names)
+# m_names = []
+# for i, name in enumerate(random_names):
+#     if name[0] != "M":
+#         random_names.pop(i)
+#         m_names.append(name)
+#     print(random_names)
+# print(m_names)
+# =============================================
+# def custom_sum(nums):
+#     s = 0
+#     for n in nums:
+#         s += n
+#     return s
+#
+#
+# result = custom_sum([65, 23, 111, 1000, 7])
+#
+# print(result)
+# ============================================
+# nums = [1000, 237, 146, 90, 6]
+# b = [num-7 for num in nums]
+# print(b)
+# # ==========================================
+# numbers = [1, 2, 3, 4, 5]
+# numbers_sqrt = []
+# numbers_sqrt = [i**2 for i in numbers]
+# for i in numbers:
+#     numbers_sqrt.append(i**2)
+# print(numbers_sqrt)
+# =====================     еще немного о генераторах    =======================
+# nums = [1000, 237,146, 90, 6]
+# a = [num-7 for num in nums] # это генератор списка
+# b = (num-7 for num in nums) # а здесь просто генератор
+# c = list(range(10))
+# print(a)
+# print(b)
+# print(c)
+# ============================================================================
+# class Dog:
+#     age = 0
+#     name = ""
+# mumu = Dog()
+# mumu.age = 10
+# mumu.name = "Мума"
+# print(mumu.age)
+# print(mumu.name)
+# ==============================================
+# goofy = Dog()
+# sharik = Dog()
+# hatico = Dog()
+# goofy.name = "Goofy"
+# sharik.name = "ШариГ"
+# hatico.name = "ハチ公"
+# print(Dog.name is hatico.name)
+# your_dog = Dog()
+# print(Dog.name is your_dog.name)
+# ===================    Clases    =============================
+# class Human:
+#     age = 0
+#     name = ""
+#     gender = "male"
+#
+# class Driver:
+#     crushes = 0
+#     drivingPeriod = 0
+#     name = ""
+#
+# class ZigaNut:
+#     putin = "god"
+#     russia = "good"
+#     money = 0
+#
+# class Lier:
+#     lie = True
+#     truth = False
+#     always = True
+#
+# class Coach:
+#     KickAss = True
+#     EatDonat = True
+#     Fat = False
+#     Weight = 100
+# ==========================================
+# class Fly:
+#
+#     def kaka():
+#         print("срёт на ручки кухни")
+#
+#
+# SratayaMukha = Fly()
+# # SratayaMukha.kaka() #working with kaka(self)
+# Fly.kaka()  # working with kaka()
+# ====================================================
+# class Bird:
+#
+#     def fly(self):
+#         self.fly_text = "текст, доступный только объекту"
+#         print("летит")
+#
+#
+# karasu = Bird()
+# karasu.fly()
+# print(karasu.fly_text)
+# print(Bird.fly_text) # вызовет ошибку
+# class Bird:
+# =====================================================================
+#     def __init__(self): # до и после слова init ставим 2 прочерка
+#         self.text = "текст, доступный только объекту"
+#
+#     def fly(self):
+#
+#         print("летит")
+#
+#
+# karasu = Bird() # вызов __init__ происходит в этот момент
+#
+# print(karasu.text)
+# ===================================================================
+# class User:
+#
+#     def __init__(self, name, money):
+#         self.name = name
+#         self.money = money
+#
+#     def __str__(self):
+#         return self.name
+#
+#     def __int__(self):
+#         return self.money
+#
+#
+# user = User("Марк", 420)
+# print(user)
+# print(int(user))
+# =================================================
+# class Person:
+#
+#     def __init__(self, person_name, person_age):
+#         self.name = person_name
+#         self.age = person_age
+#
+#     def __str__(self):
+#         return 'Person name is {self.name} and age is {self.age}'
+#
+#
+# p = Person('Andrew', 24)
+# # print(p.__str__())
+# ====================================   API   ===================================
+# import requests
+#
+# url = "https://api.exchangerate.host/latest"
+# response = requests.get(url)
+# data = response.json()
+# a = data.get('rates')
+# b = a.get('RUB')
+# print(b)
+# print(data)
+
+
