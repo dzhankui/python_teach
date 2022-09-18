@@ -725,5 +725,16 @@ random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "J
 # print(b)
 # print(data)
 # ==================================== 1-string calculator ===================================
-print(eval(input(': ')))
+# print(eval(input(': ')))
+#   ================================= Beauty color hexagon ================================
+import turtle
 
+t = turtle.Pen()
+turtle.speed(100)
+turtle.bgcolor('white')
+colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow', 'magenta']
+for i in range(360):
+    t.pencolor(colors[i // 150])
+    t.width(i // 100 + 1)
+    t.forward(i)
+    t.left(60)
