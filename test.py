@@ -714,7 +714,7 @@ random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "J
 #
 # p = Person('Andrew', 24)
 # # print(p.__str__())
-# ====================================   API   ===================================
+# ====================================   API JSON --> DICT ===================================
 # import requests
 #
 # url = "https://api.exchangerate.host/latest"
@@ -724,5 +724,6 @@ random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "J
 # b = a.get('RUB')
 # print(b)
 # print(data)
-
+# ==================================== 1-string calculator ===================================
+print(eval(input(': ')))
 
