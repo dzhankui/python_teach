@@ -739,4 +739,10 @@ random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "J
 #     t.forward(i)
 #     t.left(60)
 # ==========================================================================================
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+
+plt.imshow(img.reshape((28, 28)))
+plt.show()
 
