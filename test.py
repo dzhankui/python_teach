@@ -560,7 +560,7 @@ import requests
 # price = 10 if choice == "кетчуп" else 12
 # print(price)
 # =================================================
-random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "John", "Sinji"]
+# random_names = ["Peter", "Ivan", "Mark", "Maksim", "Alex", "Jacob", "Abdula", "John", "Sinji"]
 
 # m_names = []
 # for name in random_names:
