@@ -739,6 +739,13 @@ import requests
 #     t.width(i // 100 + 1)
 #     t.forward(i)
 #     t.left(60)
-# ==========================================================================================
-
+# ==========================================    window with a button  ================================================
+# from tkinter import *
+# from tkinter import ttk
+# root = Tk()
+# root.geometry('400x400')
+# mybutton = ttk.Button(root, text='Hello, world!')
+# mybutton.place(relx=0.5, rely=0.5, anchor=CENTER)
+# root.mainloop()
+# ==================================================================================================================
 
