@@ -747,5 +747,20 @@ import requests
 # mybutton = ttk.Button(root, text='Hello, world!')
 # mybutton.place(relx=0.5, rely=0.5, anchor=CENTER)
 # root.mainloop()
-# ==================================================================================================================
-
+# ====================================  dict comprehensions   ================================================================
+'''Идея такова, что есть 2 списка с названиями стран и названиями городов.
+Позиции городов в одном списке соответствуют позициям стран в другом.
+Из двух списков можно получить словарь, если в цикле указать, что для каждой пары "ключ:значение"
+мы итерируемся параллельно (при помощи функции zip) по двум спискам'''
+# cities = ['London', 'New York', 'Tokyo', 'Cambridge', 'Oxford']
+# countries = ['UK', 'US', 'Japan', 'UK', 'UK']
+# uk_cities = {city: country for city, country in zip(cities, countries) if country == 'US'}
+# print(uk_cities)  # {'London': 'UK', 'Cambridge': 'UK', 'Oxford': 'UK'}
+# ======================
+# print('=======================')
+"""Здесь показан способ создания одного словаря из двух методом добавления """
+# cities_1 = {'New York City': 'US', 'Los Angeles': 'US'}
+# cities_2 = {'London': 'UK', 'Birmingham': 'UK'}
+# cities = {**cities_1, **cities_2}
+# print(cities)
+# {'New York City': 'US', 'Los Angeles': 'US', 'London': 'UK', 'Birmingham': 'UK'}
