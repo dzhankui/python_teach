@@ -758,9 +758,16 @@ import requests
 # print(uk_cities)  # {'London': 'UK', 'Cambridge': 'UK', 'Oxford': 'UK'}
 # ======================
 # print('=======================')
-"""Здесь показан способ создания одного словаря из двух методом добавления """
+"""Здесь показан способ создания одного словаря из двух методом добавления ** и методом union """
+# **:
 # cities_1 = {'New York City': 'US', 'Los Angeles': 'US'}
 # cities_2 = {'London': 'UK', 'Birmingham': 'UK'}
 # cities = {**cities_1, **cities_2}
 # print(cities)
 # {'New York City': 'US', 'Los Angeles': 'US', 'London': 'UK', 'Birmingham': 'UK'}
+# union(|):
+# cities_us = {'New York City': 'US', 'Los Angeles': 'US'}
+# cities_uk = {'London': 'UK', 'Birmingham': 'UK'}
+#
+# cities = cities_us|cities_uk
+# print(cities)   # {'New York City': 'US', 'Los Angeles': 'US', 'London': 'UK', 'Birmingham': 'UK'}
