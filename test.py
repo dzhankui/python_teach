@@ -352,6 +352,7 @@
 
 # ============================================      ==================================================
 """Creating a list of integers:"""
+
 # integers = list(range(10))
 # print(f'* List: {integers}')
 #
@@ -771,3 +772,16 @@ import requests
 #
 # cities = cities_us|cities_uk
 # print(cities)   # {'New York City': 'US', 'Los Angeles': 'US', 'London': 'UK', 'Birmingham': 'UK'}
+# ==================================================================================================
+import httplib2
+from googleapiclient import discovery
+from oauth2client.client import OAuth2Credentials as creds
+
+crm = discovery.build(
+    'cloudresourcemanager', 'v3', http=creds.authorize(httplib2.Http()))
+
+operation = crm.projects().create(
+    body={
+        'project_id': flags.projectId,
+        'name': 'my project'
+    }).execute()

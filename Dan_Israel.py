@@ -24,4 +24,28 @@
 кабинет для каждого класса и купить в них новые парты. За каждой партой может сидеть не больше двух учеников. 
 Известно количество учащихся в каждом из трёх классов. Сколько всего нужно закупить парт чтобы их хватило на 
 всех учеников? Программа получает на вход три натуральных числа: количество учащихся в каждом из трех классов.'''
-# hiber bee
+
+# first_class = int(input('please enter amount of students in 1-st class'))
+# second_class = int(input('please enter amount of students in 2-nd class'))
+# third_class = int(input('please enter amount of students in 3-rd class'))
+# tables = (first_class + second_class + third_class) // 2 + (first_class + second_class + third_class) % 2
+# print(tables)
+# =============================================================================
+'''Жители страны Малевии часто экспериментируют с планировкой комнат. 
+Комнаты бывают треугольные, прямоугольные и круглые. 
+Чтобы быстро вычислять жилплощадь, требуется написать программу, 
+на вход которой подаётся тип фигуры комнаты и соответствующие параметры, 
+которая бы выводила площадь получившейся комнаты.
+Для числа π в стране Малевии используют значение 3.14.'''
+
+RoomShape = input('Please, enter a room shape type')
+# magic code
+# Rectangle:
+RoomShape = a * b
+# Circle:
+RoomShape = pi * r ** 2
+# Triangle:
+# halfperimeter = hp
+hp = (a + b + c) / 2
+Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
+
