@@ -312,18 +312,25 @@ but with all five or more letter words reversed (Just like the name of this Kata
 Strings passed in will consist of only letters and spaces.
 Spaces will be included only when more than one word is present.'''
 
-words = input()
-
-
-def reverse(*args):
-    wordSplit = words.split()
-    a = ''
-    for word in wordSplit:
-        if len(word) >= 5:
-            wordSplit[wordSplit.index(word)] = word[::-1]
-            a = ' '.join(wordSplit)
-    print(a)
-
-
-reverse()
+# words = input()
+#
+#
+# def reverse(*args):
+#     wordSplit = words.split()
+#     a = ''
+#     for word in wordSplit:
+#         if len(word) >= 5:
+#             wordSplit[wordSplit.index(word)] = word[::-1]
+#             a = ' '.join(wordSplit)
+#     print(a)
+#
+#
+# reverse()
 # ==========================================================
+numbers = [4, 10, 5, 9]
+
+total = 0
+for i in numbers:
+    total += i
+
+print(total)
