@@ -83,4 +83,6 @@ elif RoomShape == 'круг':
     r = int(input('please, enter a radius of the room'))
     area = pi * r ** 2
 print('Room area is', area)
+
+# дописать проверку для других форм комнаты
 # ====================================  Conditions  II  ========================================
