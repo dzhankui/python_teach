@@ -322,7 +322,6 @@ def reverse(*args):
         if len(word) >= 5:
             wordSplit[wordSplit.index(word)] = word[::-1]
             a = ' '.join(wordSplit)
-    #list into string
     print(a)
 
 
