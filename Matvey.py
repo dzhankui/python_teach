@@ -51,13 +51,15 @@ from numpy import sqrt
 
 RoomShape = input('введите форму комнаты')
 pi = 3.14
-if RoomShape == 'треугольник':
-    a = int(input())
-    b = int(input())
-    c = int(input())
-    HalfPerimeter = (a + b + c) / 2
-    Area = sqrt(HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c))
-    print('площадь комнаты =', Area)
+while True:
+    if RoomShape == 'треугольник':
+        a = int(input())
+        b = int(input())
+        c = int(input())
+        HalfPerimeter = (a + b + c) / 2
+        Area = sqrt(HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c))
+        print('площадь комнаты =', Area)
+    break
 elif RoomShape == 'прямоугольник':
     a = int(input())
     b = int(input())

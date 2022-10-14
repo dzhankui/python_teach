@@ -38,14 +38,28 @@
 которая бы выводила площадь получившейся комнаты.
 Для числа π в стране Малевии используют значение 3.14.'''
 
-RoomShape = input('Please, enter a room shape type')
-# magic code
-# Rectangle:
-RoomShape = a * b
-# Circle:
-RoomShape = pi * r ** 2
-# Triangle:
-# halfperimeter = hp
-hp = (a + b + c) / 2
-Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
+from numpy import sqrt
 
+
+RoomShape = input('Please, enter a room shape type')
+if RoomShape == 'rectangle':
+    a = int(input('Please, enter first side size'))
+    b = int(input('Please, enter second side size'))
+    Area = a * b
+if RoomShape == 'circle':
+    pi = 3.14
+    r = int(input('Please, enter a radius'))
+    Area = pi * r ** 2
+if RoomShape == 'triangle':
+    a = int(input('Please, enter first side size'))
+    b = int(input('Please, enter second side size'))
+    c = int(input('Please, enter second side size'))
+# halfperimeter = hp
+    hp = (a + b + c) / 2
+    Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
+print(Area)
+
+# hometask:
+# update interpreter
+# update numpy
+# update pip
