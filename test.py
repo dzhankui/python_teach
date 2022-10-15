@@ -152,7 +152,6 @@
 На стандартный ввод, каждое в своей строке, подаются значения XX, HH и MM.
 Гарантируется, что Катя должна проснуться в тот же день, что и заснуть.
 Программа должна выводить время, на которое нужно поставить будильник: в первой строке часы, во второй — минуты.'''
-import numpy
 
 # MinsToSleep = int(input())
 # HourLayDown = int(input())
@@ -327,10 +326,11 @@ Spaces will be included only when more than one word is present.'''
 #
 # reverse()
 # ==========================================================
-numbers = [4, 10, 5, 9]
-
-total = 0
-for i in numbers:
-    total += i
-
-print(total)
+# hours_passed = [9, 12, 8, 24, 35, 0, 15, 28]
+# high_priority = []
+#
+# for i in range(len(hours_passed)):
+#     if hours_passed[i] > 10:
+#         high_priority.append(hours_passed[i])
+#
+# print(high_priority)
