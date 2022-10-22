@@ -47,30 +47,62 @@
 которая бы выводила площадь получившейся комнаты.
 Для числа π в стране Малевии используют значение 3.14.'''
 
-from numpy import sqrt
+# from numpy import sqrt
+#
+# RoomShape = input('введите форму комнаты')
+# pi = 3.14
+# while True:
+#     if RoomShape == 'треугольник':
+#         a = int(input())
+#         b = int(input())
+#         c = int(input())
+#         HalfPerimeter = (a + b + c) / 2
+#         Area = sqrt(HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c))
+#         print('площадь комнаты =', Area)
+#         break
+#     elif RoomShape == 'прямоугольник':
+#         a = int(input())
+#         b = int(input())
+#         Area = a * b
+#         print('площадь комнаты =', Area)
+#     elif RoomShape == 'круг':
+#         r = int(input('радиус?'))
+#         Area = pi * r ** 2
+#         print('площадь комнаты', Area)
+#     else:
+#         print('что за дичь ты там ввел?')
 
-RoomShape = input('введите форму комнаты')
-pi = 3.14
-while True:
-    if RoomShape == 'треугольник':
-        a = int(input())
-        b = int(input())
-        c = int(input())
-        HalfPerimeter = (a + b + c) / 2
-        Area = sqrt(HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c))
-        print('площадь комнаты =', Area)
-    break
-elif RoomShape == 'прямоугольник':
-    a = int(input())
-    b = int(input())
-    Area = a * b
-    print('площадь комнаты =', Area)
-elif RoomShape == 'круг':
-    r = int(input('радиус?'))
-    Area = pi * r ** 2
-    print('площадь комнаты', Area)
-else:
-    print('что за дичь ты там ввел?')
-
-# сделать проверку введенных значений в цикле
+# ===================================================
 # работа с текстом
+# loops, generator range
+# list
+# 0123
+# 1234
+# x = 0
+# while x <= 10:
+#     print('Hello!')
+#     x += 1 #x = x + 1
+# range
+'''нужны числа от 1 до 100'''
+# for number in range(1, 101, 4):    #sss = start, stop, step
+#     print(number)
+# x = 0
+# while x <= 10:
+#     x += 5
+#     print(x)
+
+# text-list:
+#        01234567
+# txt = 'Zeppelin'
+# for i in txt:
+#     print(i)
+# написать каждую букву дважды
+# написать слово столько раз, сколько букв в слове
+
+#        0  1  2  3        4    |----5 water---|
+# lst = [1, 3, 5, 5.5, 'Hello', [1, 'vodka', 3]]
+# print(lst)
+# lst[5].append('beer')
+# print(lst)
+years = list(range(1981, 2020))
+print(years[-1])

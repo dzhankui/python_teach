@@ -334,3 +334,8 @@ Spaces will be included only when more than one word is present.'''
 #         high_priority.append(hours_passed[i])
 #
 # print(high_priority)
+# print([] or 1 or {})
+# print(type(b'anb'))
+# lst = [1, 3, 5, 0]
+# print(sorted(lst))
+# print(lst is sorted(lst))

@@ -38,28 +38,46 @@
 которая бы выводила площадь получившейся комнаты.
 Для числа π в стране Малевии используют значение 3.14.'''
 
-from numpy import sqrt
+# from numpy import sqrt
+#
+#
+# RoomShape = input('Please, enter a room shape type')
+# if RoomShape == 'rectangle':
+#     a = int(input('Please, enter first side size'))
+#     b = int(input('Please, enter second side size'))
+#     Area = a * b
+# if RoomShape == 'circle':
+#     pi = 3.14
+#     r = int(input('Please, enter a radius'))
+#     Area = pi * r ** 2
+# if RoomShape == 'triangle':
+#     a = int(input('Please, enter first side size'))
+#     b = int(input('Please, enter second side size'))
+#     c = int(input('Please, enter second side size'))
+# # halfperimeter = hp
+#     hp = (a + b + c) / 2
+#     Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
+# print(Area)
+#
+# =======================================================
+'''вывести на экран 100 строк со значением от 1 до 100'''
+# for number in range(0, 100, 5): #start, stop, step
+#     print(number)
+#  доделать 1, 5, 10 ... 100
 
+# 0 1 2 3 4 так считает компьютер (индексы)
+# 1 2 3 4 5 так считают люди
 
-RoomShape = input('Please, enter a room shape type')
-if RoomShape == 'rectangle':
-    a = int(input('Please, enter first side size'))
-    b = int(input('Please, enter second side size'))
-    Area = a * b
-if RoomShape == 'circle':
-    pi = 3.14
-    r = int(input('Please, enter a radius'))
-    Area = pi * r ** 2
-if RoomShape == 'triangle':
-    a = int(input('Please, enter first side size'))
-    b = int(input('Please, enter second side size'))
-    c = int(input('Please, enter second side size'))
-# halfperimeter = hp
-    hp = (a + b + c) / 2
-    Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
-print(Area)
-
-# hometask:
-# update interpreter
-# update numpy
-# update pip
+# ===============================
+#           01234567
+# for p in 'Zeppelin':
+#     print(p, 'Yankee')
+# ===============================
+# list 0  1     2         3    indexes
+lst = [2, 4, 'hello', [1, 2, 3]]
+# print(lst[3])
+# print(lst[0])
+x = 1
+while x <= 10:
+    print(x)
+    x += 5 # x = x + 1
