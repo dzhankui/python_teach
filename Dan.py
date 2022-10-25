@@ -116,7 +116,54 @@ txt = 'Дано число n. С начала суток прошло n мину
 #     print(x)
 #     x += 1
 
-# LISTS
-
-
-
+# LISTS  0     1      2      ---------------3-------------
+# lst = ['Dan', 11, 31.877465, [12, 'закуска', 'vodka', 14]]
+# print(lst[0])
+# print(lst[3][2])
+# lst[3].append('beer')
+# print(lst)
+# print(len(lst))
+# print(lst.clear())
+# lst_copy = lst.copy()
+# print(lst_copy)
+# print(lst_copy[3])
+# print(lst_copy.pop(3))
+# print(lst_copy)
+# print(lst_copy[3].index('закуска'))
+# lst1 = [0, 1, 2, [0, 1, [0, 1, 2, 3, 'k'], 3, 4]]
+# print(lst1[3][2][4])
+# lst_copy.insert(3, 'martini')
+# print(lst_copy)
+# my_list = ['Матвей', 'ашаМ', 'Полина', 'Арина', 'ашаП']
+# my_list.sort()
+# print(my_list)
+# # my_list.reverse()
+# print(my_list[1:3:])
+# ==============    strings, tuples, list    ======================
+# students = ['Ivan', 'Masha', 'Sasha']
+# students += ['Olga']
+# print(students)
+# students += 'Olga'
+# print(students)
+# ---------------        exersice
+'''
+GC-состав является важной характеристикой геномных последовательностей 
+и определяется как процентное соотношение суммы всех гуанинов и цитозинов 
+к общему числу нуклеиновых оснований в геномной последовательности.
+Напишите программу, которая вычисляет процентное содержание символов 
+G (гуанин) и C (цитозин) в введенной строке (программа не должна зависеть от регистра вводимых символов).
+Например, в строке "acggtgttat" процентное содержание символов G и C 
+равно 4/10*100 = 40.0 где 4 - это количество символов G и C, а 10 - это длина строки.
+'''
+# dna = input('enter a dna subsequence:')  # bla-bla-bla
+# # lower all symbols in dna:
+# dna = dna.lower()
+# print(dna)
+# counterGC = 0
+# # fillin' up GC with sum of c & g:
+# for element in dna:
+#     if element == 'g' or element == 'c':
+#         counterGC += 1
+# print(counterGC / len(dna) * 100)
+# print(type(counterGC / len(dna) * 100))
+# ijhjgghCccGfFFvFrssdrjhvjgfxsztwdsccccg
