@@ -27,13 +27,19 @@ from math import sqrt
 
 pi = 3.14
 shape = input('please, enter a roomshape')
+area = 0
 if shape == 'треугольник':
-    a = int(input('please enter first side of a triangle'))
-    b = int(input('please enter second side of a triangle'))
-    c = int(input('please enter third side of a triangle'))
-    p = (a + b + c) / 2
-    area = sqrt(p * (a - p) * (b - p) * (c - p))
-    print(p)
+    while True:
+        a = int(input('please enter first side of a triangle'))
+        b = int(input('please enter second side of a triangle'))
+        c = int(input('please enter third side of a triangle'))
+        p = (a + b + c) / 2
+        if (a - p) <= 0 or (b - p) <= 0 or (c - p) <= 0:
+            print('Чо за дичь ты ввел?! Повтори ввод!')
+        else:
+            area = sqrt(p * (a - p) * (b - p) * (c - p))
+            break
+    # print(p)
 elif shape == 'круг':
     r = int(input('enter a radius'))
     area = pi * r ** 2
@@ -43,3 +49,7 @@ elif shape == 'прямоугольник':
     area = a * b
 
 print('площадь', shape, "а", area, "кв.м")
+
+#  task: work on condition
+#  break
+#  continue
