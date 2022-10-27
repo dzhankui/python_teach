@@ -34,10 +34,14 @@ if shape == 'треугольник':
         b = int(input('please enter second side of a triangle'))
         c = int(input('please enter third side of a triangle'))
         p = (a + b + c) / 2
-        if (a - p) <= 0 or (b - p) <= 0 or (c - p) <= 0:
+        if (a + b) <= c or (b + c) <= a or (c + a) <= b:
+            # (a - b) < 0 or (a - c) < 0 or (b - c) < 0 or (b - a) < 0 or (c - a) < 0 or (c - b) < 0:  # It seems not good enough too, isn't?
+            # (a - p) <= 0 or (b - p) <= 0 or (c - p) <= 0:
+            # сравнивать разницу любой из сторон и полупериметра хорошая ли идея?
             print('Чо за дичь ты ввел?! Повтори ввод!')
         else:
-            area = sqrt(p * (a - p) * (b - p) * (c - p))
+            # area = sqrt(p * (a - p) * (b - p) * (c - p)) # wrong formula
+            area = sqrt(p * (p - a) * (p - b) * (p - c))
             break
     # print(p)
 elif shape == 'круг':
@@ -50,6 +54,7 @@ elif shape == 'прямоугольник':
 
 print('площадь', shape, "а", area, "кв.м")
 
-#  task: work on condition
-#  break
-#  continue
+#   task: work on condition
+#   loops exercises
+#   break
+#   continue
