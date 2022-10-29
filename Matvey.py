@@ -104,5 +104,12 @@
 # print(lst)
 # lst[5].append('beer')
 # print(lst)
-years = list(range(1981, 2020))
-print(years[-1])
+# list - sequence of objects
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# lst1 = range(1, 10)
+# print(type(lst))
+# print(type(lst1))
+
+# task: 1-1000 отдельно 10 в лист и отдельно 15 в лист
+lst10 = []
+lst15 = []

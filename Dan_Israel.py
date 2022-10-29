@@ -74,10 +74,28 @@
 #     print(p, 'Yankee')
 # ===============================
 # list 0  1     2         3    indexes
-lst = [2, 4, 'hello', [1, 2, 3]]
+# lst = [2, 4, 'hello', [1, 2, 3]]
 # print(lst[3])
 # print(lst[0])
-x = 1
-while x <= 10:
-    print(x)
-    x += 5 # x = x + 1
+# x = 1
+# while x <= 10:
+#     print(x)
+#     x += 5  # x = x + 1
+#
+# ==========================
+
+# loops while, break, continue
+
+# for in else elif
+lst1 = [2, 4, 'hello', [1, 2, 3]]
+txt = 'Жители страны Малевии часто экспериментируют'
+
+# lst = range(1, 100)          #[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# for i in lst:
+#     if i % 2 == 0:
+#         print(i)
+# for i in txt:
+#     print(i)
+# for i in txt:
+#     if i == 'и':
+#         print(i)

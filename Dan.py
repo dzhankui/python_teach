@@ -168,3 +168,25 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 # print(type(counterGC / len(dna) * 100))
 # ijhjgghCccGfFFvFrssdrjhvjgfxsztwdsccccg
 # ===================================================================================
+students = ["мАША", "коля", "СаШа", "дАшА"]
+# забыла: петя, Игорь
+# составить правильный список: все имена с большой буквы (остальные буквы имени - маленькие)
+# добавить потеряшек с именами, записанными по правилам
+# упорядочить всех по алфавиту
+#
+# add
+# sort
+# upper/lower/title
+while True:
+    x = 0
+    forgotten = input("Введи одну потеряшку и нажми ввод: ")
+    students.append(forgotten.strip())
+    x = int(input('input 1 and press enter to continue, enter 0 and press enter to finish enter the students'))
+    if x == 1:
+        continue
+    elif x == 0:
+        break
+for i in range(len(students)):
+    students[i] = students[i].title()
+students.sort()
+print(students)
