@@ -139,8 +139,7 @@ txt = 'Дано число n. С начала суток прошло n мину
 # print(my_list)
 # # my_list.reverse()
 # print(my_list[1:3:])
-# ==============    strings, tuples, list    ======================
-# students = ['Ivan', 'Masha', 'Sasha']
+# ==============    strings, tuples, list    ============
 # students += ['Olga']
 # print(students)
 # students += 'Olga'
