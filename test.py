@@ -341,7 +341,7 @@ Spaces will be included only when more than one word is present.'''
 # (lst))
 # print(lst is sorted(lst))
 # =======================================================================
-import numpy as np
-x = np.arange(35)
-x = x.reshape(7, 5)
-print(x)
+# import numpy as np
+# x = np.arange(35)
+# x = x.reshape(7, 5)
+# print(x)

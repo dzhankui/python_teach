@@ -35,15 +35,10 @@ if shape == 'треугольник':
         c = int(input('please enter third side of a triangle'))
         p = (a + b + c) / 2
         if (a + b) <= c or (b + c) <= a or (c + a) <= b:
-            # (a - b) < 0 or (a - c) < 0 or (b - c) < 0 or (b - a) < 0 or (c - a) < 0 or (c - b) < 0:  # It seems not good enough too, isn't?
-            # (a - p) <= 0 or (b - p) <= 0 or (c - p) <= 0:
-            # сравнивать разницу любой из сторон и полупериметра хорошая ли идея?
             print('Чо за дичь ты ввел?! Повтори ввод!')
         else:
-            # area = sqrt(p * (a - p) * (b - p) * (c - p)) # wrong formula
             area = sqrt(p * (p - a) * (p - b) * (p - c))
             break
-    # print(p)
 elif shape == 'круг':
     r = int(input('enter a radius'))
     area = pi * r ** 2
@@ -52,10 +47,14 @@ elif shape == 'прямоугольник':
     b = int(input('enter a second side size'))
     area = a * b
 
-print(f'площадь {shape}а, {area}, кв.м')
+print(f'площадь {shape}а, {area}, кв.м')   #f-string realized
 
-#   f-strings
-#   task: work on condition
-#   loops exercises
-#   break
-#   continue
+
+#  task: add conditions to the circle and rectengle roomshapes
+# ==============================================
+
+name = input('what is your name? Your name is: ')
+city = input("what from are you? you're from: ")
+print(f'Hello, {name}, from {city}!')
+
+# Harry Potter
