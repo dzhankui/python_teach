@@ -52,8 +52,9 @@ elif shape == 'прямоугольник':
     b = int(input('enter a second side size'))
     area = a * b
 
-print('площадь', shape, "а", area, "кв.м")
+print(f'площадь {shape}а, {area}, кв.м')
 
+#   f-strings
 #   task: work on condition
 #   loops exercises
 #   break
