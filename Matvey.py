@@ -113,3 +113,8 @@
 # task: 1-1000 отдельно 10 в лист и отдельно 15 в лист
 lst10 = []
 lst15 = []
+for i in range(1001):
+    if i % 10:
+        lst10.append(i)
+    elif i % 15:
+        lst15.append(i)
