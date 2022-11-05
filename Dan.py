@@ -226,3 +226,16 @@ print(list_3)
 # range, for
 # Денис выполняет программу самостоятельно
 # добавить проверку введенных данных на условия a<=b, c<=d
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+for i in range(c, d + 1):
+    print('\t', i, end='')
+for i in range(a, b + 1):
+    print()
+    print(x, end='\t')
+for i in range(c, d + 1):
+    print(i * i, end='\t')
+for i in range(a, b + 1):
+    print()
