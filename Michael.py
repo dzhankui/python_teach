@@ -29,7 +29,7 @@ from math import sqrt
 # shape = input('please, enter a roomshape')
 # area = 0
 # if shape == 'треугольник':
-#     while True:
+#     while x = True:
 #         a = int(input('please enter first side of a triangle'))
 #         b = int(input('please enter second side of a triangle'))
 #         c = int(input('please enter third side of a triangle'))
@@ -56,7 +56,32 @@ from math import sqrt
 # name = input('what is your name? Your name is: ')
 # city = input("what from are you? you're from: ")
 # print(f'Hello, {name} from {city}!')
-#==================================================
+# #==================================================
 # Lists
 # Lists of lists
-# 'Harry Potter'
+# 'Harry Potter
+#        0     1     2     |-----------3------------|
+#                             0        1        2
+# x = ['Sam', 123, 123.78, ['beer', 'vodka', 'drugs']] #list
+# print(x[0]) #
+# print(x[3][0]) #
+
+# print(d)
+
+# hardcore with dictionaries and lists
+# x = ['Hi', 4, 5, 6]
+# y = []
+# for i in range(1, 70, 2): #Start Stop Step
+#     y.append(i)
+# print(y)
+# item_list = [
+#     {'juice': 2},
+#     {'milk': 1},
+#     {'apple': 10}
+# ]
+# prices = [100, 50, 20]
+# print(item_list[0]['juice'])
+# d = {'Michael':'Berberyan', 'pizza':'margarita'}
+# print(d['Michael'])
+# r = item_list[0]['juice'] * 2
+# print(r)

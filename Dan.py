@@ -201,41 +201,65 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 Напишите программу, на вход которой даются четыре числа a, b, c и d, каждое в своей строке. 
 Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a;b] на все числа отрезка [c;d].
 Числа a, b, c и d являются натуральными и не превосходят 10, a<=b, c<=d.'''
-import numpy as np
-
-a = int(input('a = '))  #
-b = int(input('b = '))  #
-c = int(input('c = '))  #
-d = int(input('d = '))  #
-list_1 = []
-list_2 = []
-list_3 = []
-for i in range(a, b + 1):
-    list_1.append(i)
-for i in range(c, d + 1):
-    list_2.append(i)
-for i in range(len(list_1)):
-    for j in range(len(list_2)):
-        list_3.append(list_1[i] * list_2[j])
-
-print(list_3)
+# a = int(input('a = '))  #
+# b = int(input('b = '))  #
+# c = int(input('c = '))  #
+# d = int(input('d = '))  #
+# list_1 = []
+# list_2 = []
+# list_3 = []
+# for i in range(a, b + 1):
+#     list_1.append(i)
+# for i in range(c, d + 1):
+#     list_2.append(i)
+# for i in range(len(list_1)):
+#     for j in range(len(list_2)):
+#         list_3.append(list_1[i] * list_2[j])
+#
+# print(list_3)
 # if i = i-1:
 # next row
 # print(list_3[:len:])
 
-# range, for
+
 # Денис выполняет программу самостоятельно
 # добавить проверку введенных данных на условия a<=b, c<=d
 a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
-for i in range(c, d + 1):
-    print('\t', i, end='')
-for i in range(a, b + 1):
-    print()
-    print(x, end='\t')
-for i in range(c, d + 1):
-    print(i * i, end='\t')
-for i in range(a, b + 1):
-    print()
+# list_of_results = [
+#     [1, 2, 3, 4],
+#     [2, 3, 4, 5],
+#     [3, 4, 5, 6],
+#     [4, 5, 6, 7]
+# ]
+# example:
+# [   1  2  3  4] - x
+# [1  1  2  3  4]
+# [2  2  4  6  8]
+# [3  3  6  9  12]
+# [4  4  8  12 16]
+#  y
+
+
+# list_of_results.clear()
+# 1 заполнить значениями (результатами умножения)
+# 2 print it all row by row
+# 3 строки соответствуют интервалу a-b, столбцы соответствуют интервалу c-d
+# # for i in range(len(list_of_results)):
+#     print(list_of_results[i])
+list_of_results = []
+tmp = []
+lst = [] # - row
+for i in range(a, b+1):
+    lst.append(i)
+lst2 = [] # - column
+for i in range(c, d+1):
+    lst2.append(i)
+for index in range(len(lst)):
+    tmp.append(index * lst2[index])
+    list_of_results.append(tmp)
+print(lst)
+print(lst2)
+print(list_of_results)

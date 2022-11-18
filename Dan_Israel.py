@@ -1,5 +1,5 @@
-# http://pythontutor.ru/lessons/inout_and_arithmetic_operations/problems/apples/
-'''Есть корзина с яблоками (basket). К нам в гости пришло несколько человек (people).
+'''http://pythontutor.ru/lessons/inout_and_arithmetic_operations/problems/apples/
+Есть корзина с яблоками (basket). К нам в гости пришло несколько человек (people).
 Требуется определить, сколько целых яблок достанется каждому (count), ведь ножа-то у нас нет.
 А сколько яблок останется после гостей лежать в корзине?'''
 # apple = int(input('Input apples amount'))    # количество яблок
@@ -73,7 +73,7 @@
 # for p in 'Zeppelin':
 #     print(p, 'Yankee')
 # ===============================
-# list 0  1     2         3    indexes
+# list   0  1     2         3    indexes
 # lst = [2, 4, 'hello', [1, 2, 3]]
 # print(lst[3])
 # print(lst[0])
@@ -109,14 +109,47 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 Например, в строке "acggtgttat" процентное содержание символов G и C 
 равно 4/10*100 = 40.0 где 4 - это количество символов G и C, а 10 - это длина строки.
 '''
-dna = input('please input a dna sequence')
-dna = dna.lower()  # explanation
-counter = 0
-for i in dna:
-    if i == 'g' or i == 'c':
-        counter += 1  # increase by 1
-percent = (counter / len(dna)) * 100
-print(percent, '%')
+# dna = input('please input a dna sequence')
+# dna = dna.lower()  # explanation
+# counter = 0
+# for i in dna:
+#     if i == 'g' or i == 'c':
+#         counter += 1  # increase by 1
+# percent = (counter / len(dna)) * 100
+# print(percent, '%')
 
 # GbvfCvbggvbgGc
 # kjbjgoovgcggcbgcdxcg
+
+# ========================================================================
+'''записать наоборот (reverse) все слова длиной 5 и более букв'''
+txt = 'Жители страны Малевии часто экспериментируют с формой их дома'
+txt = txt.split()
+for word in txt:
+    if len(word) >= 5:
+        word = word[::-1]
+print(type(txt))
+print(txt)
+
+# txt = ' '.join(txt)
+# print(type(txt))
+# print(txt)
+# print('142' + '324')
+
+# срез
+# lst = [1, 2, 3]
+# lst_cutted = lst[::-1]
+# print(lst_cutted)
+
+
+
+
+
+
+
+
+# ========================================================================
+'''Write a function that takes in a string of one or more words, and returns the same string,
+but with all five or more letter words reversed (Just like the name of this Kata).
+Strings passed in will consist of only letters and spaces.
+Spaces will be included only when more than one word is present.'''
