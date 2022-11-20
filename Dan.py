@@ -257,9 +257,11 @@ for i in range(a, b+1):
 lst2 = [] # - column
 for i in range(c, d+1):
     lst2.append(i)
-for index in range(len(lst)):
-    tmp.append(index * lst2[index])
+for i in range(len(lst)):
+    tmp.append(i * lst2[i])
     list_of_results.append(tmp)
+#  rows & columns
 print(lst)
 print(lst2)
 print(list_of_results)
+# print(range(100))

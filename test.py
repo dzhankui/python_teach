@@ -131,9 +131,13 @@
 #
 #     rslt_url += chr(charCode)
 # print(rslt_url)
-# todo http://www.pythonchallenge.com/pc/def/ocr.html ==================================================================
+# ==================================================================
+# todo http://www.pythonchallenge.com/pc/def/ocr.html
+# todo https://www.jamespk.me/journal/python/python_challange_zero_to_six.html
+# todo Search for those letters, using the re (regular expression) module
 '''
 find rare characters in the mess below:
+
 
 %%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
 @##&{#&{&)*%(]{{([*}@[@&]+!!*{)!}{%+{))])[!^})+)$]#{*+^((@^@}$[**$&^{$!@#$%)!@(&
@@ -1560,11 +1564,11 @@ Spaces will be included only when more than one word is present.'''
 #         high_priority.append(hours_passed[i])
 #
 # print(high_priority)
+# ----------------different things---------------------
 # print([] or 1 or {})
 # print(type(b'anb'))
 # lst = [1, 3, 5, 0]
-# print(sorted
-# (lst))
+# print(sorted(lst))
 # print(lst is sorted(lst))
 # ======================    работа с массивами  =============================
 
@@ -1574,4 +1578,9 @@ Spaces will be included only when more than one word is present.'''
 # x = x.reshape(10, 10) #(rows, columns)
 # print(x)
 # =========================================================================
-# print(2**38)
+lst = 'привет коля ты пришел домой во сколько часов и минут'
+splitted_lst = lst.split()
+for word in splitted_lst:
+    if len(word) >= 5:
+        splitted_lst[splitted_lst.index(word)] = word[::-1]
+print(splitted_lst)
