@@ -121,9 +121,9 @@ txt = 'Дано число n. С начала суток прошло n мину
 # print(lst[0])
 # print(lst[3][2])
 # lst[3].append('beer')
-# print(lst)
-# print(len(lst))
-# print(lst.clear())
+# # print(lst)
+# # print(len(lst))
+# # print(lst.clear())
 # lst_copy = lst.copy()
 # print(lst_copy)
 # print(lst_copy[3])
@@ -137,7 +137,7 @@ txt = 'Дано число n. С начала суток прошло n мину
 # my_list = ['Матвей', 'ашаМ', 'Полина', 'Арина', 'ашаП']
 # my_list.sort()
 # print(my_list)
-# # my_list.reverse()
+# my_list.reverse()
 # print(my_list[1:3:])
 # ==============    strings, tuples, list    ============
 # students += ['Olga']
@@ -224,10 +224,10 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 
 # Денис выполняет программу самостоятельно
 # добавить проверку введенных данных на условия a<=b, c<=d
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
+a = int(input('enter a first digit -->'))
+b = int(input('enter a second digit -->'))
+c = int(input('enter a third digit -->'))
+d = int(input('enter a fourth digit -->'))
 # list_of_results = [
 #     [1, 2, 3, 4],
 #     [2, 3, 4, 5],
@@ -242,26 +242,36 @@ d = int(input())
 # [4  4  8  12 16]
 #  y
 
-
 # list_of_results.clear()
 # 1 заполнить значениями (результатами умножения)
 # 2 print it all row by row
 # 3 строки соответствуют интервалу a-b, столбцы соответствуют интервалу c-d
 # # for i in range(len(list_of_results)):
 #     print(list_of_results[i])
+#  there is solvation is only for the square things, where len(lst) = len(lst2)
 list_of_results = []
 tmp = []
 lst = [] # - row
-for i in range(a, b+1):
+for i in range(a, b+1): #filling lst with numbers a to b
     lst.append(i)
 lst2 = [] # - column
-for i in range(c, d+1):
+for i in range(c, d+1): #filling lst2 with numbers c to d
     lst2.append(i)
 for i in range(len(lst)):
-    tmp.append(i * lst2[i])
+    tmp.append(lst[i] * lst2[i]) #multiply lst digits by lst2 digits
     list_of_results.append(tmp)
-#  rows & columns
-print(lst)
-print(lst2)
-print(list_of_results)
-# print(range(100))
+#  print list_of_results (list by list)
+for i in list_of_results:
+    print(i)
+# =========================================================================
+# next approach must be for the non-square tasks when len(lst) != len(lst)
+# example: a,b = 2-4 c,d = 1-5
+# [2, 4, 6, 8, 10]
+# [3, 6, 9, 12, 15]
+# [4, 8, 12, 16, 20]
+# ---------------or---------------
+# [2, 3, 4]
+# [4, 6, 8]
+# [6, 9, 12]
+# [8, 12, 16]
+# [10, 15, 20]

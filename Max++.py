@@ -35,7 +35,7 @@ nba_players = {
 '''
 # ================================================================================
 '''Write a function that takes in a string of one or more words, and returns the same string,
-but with all five or more letter words reversed (Just like the name of this Kata).
+but with all five or more letter words reversed.
 Strings passed in will consist of only letters and spaces.
 Spaces will be included only when more than one word is present.'''
 # ===============================================================================
@@ -45,18 +45,30 @@ Spaces will be included only when more than one word is present.'''
 Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a;b] на все числа отрезка [c;d].
 Числа a, b, c и d являются натуральными и не превосходят 10, a<=b, c<=d.'''
 # ==============================================================================
-# To unlock the code use this:
+# подсказка:
 '''
+ключи шифрования: 
 K --> M
 O --> Q
 E --> G
 '''
+# вариант решения задачи
+# написать функцию, которая в качестве параметров принимает ключи шифрования
 
 s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
     "rfyrq ufyr amknsrcpq ypc dmp. " \
     "bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. " \
     "sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  " \
     "lmu ynnjw ml rfc spj."
+# print(ord(s[3]))
+# print(chr(109))
+
+
+
+
+
+
+
 # ==============================================================================
 # The page states: "recognize the characters. maybe they are in the book, but MAYBE they are in the page source."
 # See the page source for more info

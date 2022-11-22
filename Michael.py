@@ -85,3 +85,26 @@ from math import sqrt
 # print(d['Michael'])
 # r = item_list[0]['juice'] * 2
 # print(r)
+# ==========================================================
+# x = ['Sam', 123, 123.78, ['beer', 'vodka', 'drugs']]
+# for range -> 1 - 10
+# lst = [] # -> 1 - 10
+# ----------------
+# подсказка:
+'''
+ключи шифрования: 
+K --> M
+O --> Q
+E --> G
+'''
+# вариант решения задачи
+# написать функцию, которая в качестве параметров принимает ключи шифрования
+
+s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
+    "rfyrq ufyr amknsrcpq ypc dmp. " \
+    "bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. " \
+    "sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  " \
+    "lmu ynnjw ml rfc spj."
+# print(ord(s[3]))
+# print(chr(109))
+
