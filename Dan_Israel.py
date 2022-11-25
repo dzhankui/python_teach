@@ -73,9 +73,10 @@
 # for p in 'Zeppelin':
 #     print(p, 'Yankee')
 # ===============================
-# list   0  1     2         3    indexes
-# lst = [2, 4, 'hello', [1, 2, 3]]
-# print(lst[3])
+# list   0  1     2     |---------- 3 --------|    indexes
+#                        0         1        2
+# lst = [2, 4, 'hello', [1, 'Harry Potter', 3]]
+# print(lst[3][1])
 # print(lst[0])
 # x = 1
 # while x <= 10:
@@ -123,14 +124,23 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 
 # ========================================================================
 '''записать наоборот (reverse) все слова длиной 5 и более букв'''
+#        0      1       2      3         4          5    6    7   8
 txt = 'Жители страны Малевии часто экспериментируют с формой их дома'
 txt = txt.split()
 for word in txt:
     if len(word) >= 5:
-        word = word[::-1]
-print(type(txt))
+        txt[txt.index(word)] = word[::-1] # = txt[0]
 print(txt)
-
+# -----------------------------------------------------------------
+# def reverse(*args):
+#     wordSplit = words.split()
+#     a = ''
+#     for word in wordSplit:
+#         if len(word) >= 5:
+#             wordSplit[wordSplit.index(word)] = word[::-1]
+#             a = ' '.join(wordSplit)
+#     print(a)
+# -----------------------------------------------------------------
 # txt = ' '.join(txt)
 # print(type(txt))
 # print(txt)
@@ -140,14 +150,6 @@ print(txt)
 # lst = [1, 2, 3]
 # lst_cutted = lst[::-1]
 # print(lst_cutted)
-
-
-
-
-
-
-
-
 # ========================================================================
 '''Write a function that takes in a string of one or more words, and returns the same string,
 but with all five or more letter words reversed (Just like the name of this Kata).

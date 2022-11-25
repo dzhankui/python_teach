@@ -264,7 +264,7 @@ for i in range(len(lst)):
 for i in list_of_results:
     print(i)
 # =========================================================================
-# next approach must be for the non-square tasks when len(lst) != len(lst)
+# next approach must be for the non-square tasks i.e. when len(lst) != len(lst)
 # example: a,b = 2-4 c,d = 1-5
 # [2, 4, 6, 8, 10]
 # [3, 6, 9, 12, 15]
