@@ -141,23 +141,26 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 # knkjHBUYGUBVGvgbgcbc
 
 # ========================================================================
-'''записать наоборот (reverse) все слова длиной 5 и более букв'''
-txt = 'и на селе паром бьёт вереск птицу сереневенько'  # immutable
-txt = txt.split()  # txt --> list
-a = ''
-for word in txt:  # for each word in list
-    if len(word) >= 5:  # if it's length >= 5
-        txt[txt.index(word)] = word[::-1]  # = txt[3]
-print(txt)
-a = ' '.join(txt)
-print(a)
+# '''записать наоборот (reverse) все слова длиной 5 и более букв'''
+# txt = 'и на селе паром бьёт вереск птицу сереневенько'  # immutable
+# txt = txt.split()  # txt --> list
+# a = ''
+# for word in txt:  # for each word in list
+#     if len(word) >= 5:  # if it's length >= 5
+#         txt[txt.index(word)] = word[::-1]  # = txt[3]
+# print(txt)
+# a = ' '.join(txt)
+# print(a)
 
 #        0  1  2  3        4    |----5 water---|
 # lst = [1, 3, 5, 5.5, 'Hello', [1, 'vodka', 3]]
 # lst[4]
 # lst[5][1]
-# x = 'параллелепипед'#[1, 2, 3, 4, 5]
-# x = reversed(x)
-# # x = x[::-1]
+# x = 'параллелепипед'
+x = [1, 2, 3, 4, 5]
+i = reversed([1, 2, 3, 4, 5])
+print(i)
+# x.reverse()
 # print(x)
+# x = x[::-1]
 
