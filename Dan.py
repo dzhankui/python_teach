@@ -228,12 +228,7 @@ a = int(input('enter a first digit -->'))
 b = int(input('enter a second digit -->'))
 c = int(input('enter a third digit -->'))
 d = int(input('enter a fourth digit -->'))
-# list_of_results = [
-#     [1, 2, 3, 4],
-#     [2, 3, 4, 5],
-#     [3, 4, 5, 6],
-#     [4, 5, 6, 7]
-# ]
+# list_of_results = [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7]]
 # example:
 # [   1  2  3  4] - x
 # [1  1  2  3  4]
@@ -250,15 +245,15 @@ d = int(input('enter a fourth digit -->'))
 #     print(list_of_results[i])
 #  there is solvation is only for the square things, where len(lst) = len(lst2)
 list_of_results = []
-tmp = []
-lst = [] # - row
-for i in range(a, b+1): #filling lst with numbers a to b
+tmp = []  $ - row
+lst = []  # - row
+for i in range(a, b + 1):  # filling lst with numbers a to b
     lst.append(i)
-lst2 = [] # - column
-for i in range(c, d+1): #filling lst2 with numbers c to d
+lst2 = []  # - column
+for i in range(c, d + 1):  # filling lst2 with numbers c to d
     lst2.append(i)
 for i in range(len(lst)):
-    tmp.append(lst[i] * lst2[i]) #multiply lst digits by lst2 digits
+    tmp.append(lst[i] * lst2[i])  # multiply lst digits by lst2 digits
     list_of_results.append(tmp)
 #  print list_of_results (list by list)
 for i in list_of_results:
