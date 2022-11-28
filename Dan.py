@@ -245,7 +245,7 @@ d = int(input('enter a fourth digit -->'))
 #     print(list_of_results[i])
 #  there is solvation is only for the square things, where len(lst) = len(lst2)
 list_of_results = []
-tmp = []  $ - row
+tmp = []
 lst = []  # - row
 for i in range(a, b + 1):  # filling lst with numbers a to b
     lst.append(i)

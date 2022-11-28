@@ -1578,9 +1578,55 @@ Spaces will be included only when more than one word is present.'''
 # x = x.reshape(10, 10) #(rows, columns)
 # print(x)
 # =========================================================================
-lst = 'привет коля ты пришел домой во сколько часов и минут'
-splitted_lst = lst.split()
-for word in splitted_lst:
-    if len(word) >= 5:
-        splitted_lst[splitted_lst.index(word)] = word[::-1]
-print(splitted_lst)
+'''Напишите программу, которая помогает найти это число.
+Программа должна считывать размеры команд (два положительных целых числа aa и bb, каждое число вводится на отдельной строке) 
+и выводить наименьшее число dd, которое делится на оба этих числа без остатка.'''
+# aa = int(input())
+# bb = int(input())
+# d = 0
+# while True:
+#     d += 1
+#     if d % aa == 0 and d % bb == 0:
+#         print(d)
+#         break
+# ========================================================================
+'''Напишите программу, которая считывает целые числа с консоли по одному числу в строке.
+Для каждого введённого числа проверить:
+если число меньше 10, то пропускаем это число;
+если число больше 100, то прекращаем считывать числа;
+в остальных случаях вывести это число обратно на консоль в отдельной строке.'''
+# while True:
+#     a = int(input())
+#     b = 0
+#     if a < 10:
+#         b = 0
+#     elif a > 100:
+#         break
+#     else:
+#         print(a)
+# ======================================================================
+'''Напишите программу, на вход которой даются четыре числа a, b, c и d, каждое в своей строке. 
+Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a; b][a; b] на все числа отрезка [c;d][c;d].'''
+
+a = int(input('enter first digit -->'))
+b = int(input('enter first digit -->'))
+c = int(input('enter first digit -->'))
+d = int(input('enter first digit -->'))
+tmp = []
+row = []
+col = []
+col_idx = 0
+while True:
+    if a <= b and c <= d and a < 10 and b < 10 and c < 10 and d < 10:
+        for i in range(a, b + 1):
+            row.append(i) #
+        for i in range(c, d + 1):
+            col.append(i) #
+        for x in row:
+            print('\t', x*col[col_idx])
+    break
+
+    else:
+        print('Try it again')
+
+
