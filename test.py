@@ -1579,8 +1579,8 @@ Spaces will be included only when more than one word is present.'''
 # print(x)
 # =========================================================================
 '''Напишите программу, которая помогает найти это число.
-Программа должна считывать размеры команд (два положительных целых числа aa и bb, каждое число вводится на отдельной строке) 
-и выводить наименьшее число dd, которое делится на оба этих числа без остатка.'''
+Программа должна считывать размеры команд (два положительных целых числа a и b, каждое число вводится на отдельной строке) 
+и выводить наименьшее число d, которое делится на оба этих числа без остатка.'''
 # aa = int(input())
 # bb = int(input())
 # d = 0
@@ -1606,27 +1606,38 @@ Spaces will be included only when more than one word is present.'''
 #         print(a)
 # ======================================================================
 '''Напишите программу, на вход которой даются четыре числа a, b, c и d, каждое в своей строке. 
-Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a; b][a; b] на все числа отрезка [c;d][c;d].'''
+Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a; b] на все числа отрезка [c; d].'''
 
-a = int(input('enter first digit -->'))
-b = int(input('enter first digit -->'))
-c = int(input('enter first digit -->'))
-d = int(input('enter first digit -->'))
+a = int(input('enter first digit to generate the column-sequense -->'))
+b = int(input('enter last digit to generate the column-sequense-->'))
+c = int(input('enter first digit to generate the row-sequense -->'))
+d = int(input('enter last digit to generate the row-sequense -->'))
 tmp = []
 row = []
 col = []
-col_idx = 0
+list_of_results = []
 while True:
     if a <= b and c <= d and a < 10 and b < 10 and c < 10 and d < 10:
-        for i in range(a, b + 1):
+        for i in range(a, b + 1):# creating row of numbers in row list
             row.append(i) #
-        for i in range(c, d + 1):
+        for i in range(c, d + 1):# creating columns number in col list
             col.append(i) #
-        for x in row:
-            print('\t', x*col[col_idx])
-    break
+        print('first num every column starts with -->', row)
+        print('first num every row starts with -->', col)
+        # printing first "column" (informational) for the list_of_results with tab before it:
+        print('now print first column (first num every row starts with)')
+        for i in range(len(col)):
+            print(col[i], '\t', col[i]*row[i])
 
+        # breaking the loop (it asks user to enter numbers until he input the right nums)
+        break
     else:
         print('Try it again')
+# for num in list_of_results:
+
+
+# print(col[0], '\t', row[0] * col[0], '\t', row[0] * col[1], '\t', row[0] * col[2]) - печать первой строки с отступом в начале
+
+
 
 
