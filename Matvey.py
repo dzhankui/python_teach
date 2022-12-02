@@ -189,11 +189,11 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 #
 #
 # print(func(c=int(input('enter c --> ')), b=int(input('enter b --> ')), a=int(input('enter a --> '))))
-def func(**kwargs):
-    return kwargs
-
-
-print(func(a=1, b=2))
+# def func(**kwargs):
+#     return kwargs
+#
+#
+# print(func(a=1, b=2))
 
 
 # def func(a=1, b=2, c=3):
