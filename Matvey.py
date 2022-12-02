@@ -157,10 +157,44 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 # lst[4]
 # lst[5][1]
 # x = 'параллелепипед'
-x = [1, 2, 3, 4, 5]
-i = reversed([1, 2, 3, 4, 5])
-print(i)
+# x = [1, 2, 3, 4, 5]
+# i = reversed([1, 2, 3, 4, 5])
+# print(i)
 # x.reverse()
 # print(x)
 # x = x[::-1]
+'''
+Функция в python - объект, принимающий аргументы и возвращающий значение. 
+Обычно функция определяется с помощью инструкции def.
+'''
 
+
+# x = input('say hello --> ')
+# def hello():
+#     return x
+# print(hello())
+# def add(x, y):
+#     return x - y
+#
+#
+# print(add(1, 10))
+
+# def func(*args):
+#     return sum(args)
+#
+#
+# print(func(1, 2, 3, 4))
+# def func(a, b, c):
+#     return a - (b + c)
+#
+#
+# print(func(c=int(input('enter c --> ')), b=int(input('enter b --> ')), a=int(input('enter a --> '))))
+def func(**kwargs):
+    return kwargs
+
+
+print(func(a=1, b=2))
+
+
+# def func(a=1, b=2, c=3):
+#     return a + b + c

@@ -125,12 +125,12 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 # ========================================================================
 '''записать наоборот (reverse) все слова длиной 5 и более букв'''
 #        0      1       2      3         4          5    6    7   8
-txt = 'Жители страны Малевии часто экспериментируют с формой их дома'
-txt = txt.split()
-for word in txt:
-    if len(word) >= 5:
-        txt[txt.index(word)] = word[::-1] # = txt[0]
-print(txt)
+# txt = 'Жители страны Малевии часто экспериментируют с формой их дома'
+# txt = txt.split()
+# for word in txt:
+#     if len(word) >= 5:
+#         txt[txt.index(word)] = word[::-1] # = txt[0]
+# print(txt)
 # -----------------------------------------------------------------
 # def reverse(*args):
 #     wordSplit = words.split()
@@ -155,3 +155,19 @@ print(txt)
 but with all five or more letter words reversed (Just like the name of this Kata).
 Strings passed in will consist of only letters and spaces.
 Spaces will be included only when more than one word is present.'''
+
+
+# ================================================================================
+# def add(**kwargs):
+#     return kwargs
+#
+#
+# print(dic)
+def f(n):
+    return n * 10 + 5
+
+
+print(f(f(f(10))))
+# f(10) = 105
+#         1055
+#         10555
