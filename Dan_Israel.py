@@ -157,17 +157,22 @@ Strings passed in will consist of only letters and spaces.
 Spaces will be included only when more than one word is present.'''
 
 
-# ================================================================================
+# =====================     functions       ==================================
 # def add(**kwargs):
 #     return kwargs
 #
 #
-# print(dic)
-def f(n):
-    return n * 10 + 5
-
-
-print(f(f(f(10))))
+# print(add())
+# =======================================
+# def f(n):
+#     return n * 10 + 5
+#
+#
+# print(f(f(f(10))))
 # f(10) = 105
 #         1055
 #         10555
+# ====================================09.12.2022=============   exersises   =====
+'''Самостоятельная работа с ментором: переписать задачу про страну Малевию с использовнием функций'''
+
+

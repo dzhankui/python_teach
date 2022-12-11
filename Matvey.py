@@ -189,7 +189,7 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 #
 #
 # print(func(c=int(input('enter c --> ')), b=int(input('enter b --> ')), a=int(input('enter a --> '))))
-# def func(**kwargs):
+# def func(**kwargs): #inthis case the function returns a dictionary of a variables as keys and values as values
 #     return kwargs
 #
 #
@@ -198,3 +198,6 @@ G (гуанин) и C (цитозин) в введенной строке (пр�
 
 # def func(a=1, b=2, c=3):
 #     return a + b + c
+# =================================09.12.2022============================
+'''Самостоятельная работа с ментором: переписать задачу про Малевию с использованием функций'''
+# finish and test the program

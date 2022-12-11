@@ -2,7 +2,7 @@
 Определите, сколько часов и минут будут показывать электронные часы в этот момент.
 Программа должна вывести два числа: количество часов (от 0 до 23) и количество минут (от 0 до 59).
 Учтите, что число n может быть больше, чем количество минут в сутках."""
-from math import sqrt
+# from math import sqrt
 
 # n = int(input())  # general amount of minutes
 # day = n // 1440
@@ -100,24 +100,30 @@ E --> G
 # вариант решения задачи
 # написать функцию, которая в качестве параметров принимает ключи шифрования
 
-s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
-    "rfyrq ufyr amknsrcpq ypc dmp. " \
-    "bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. " \
-    "sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.  " \
-    "lmu ynnjw ml rfc spj."
-
-
-
-
-
-
-
-
-
-
+s = "g fmnc wms bgblr rpylqjyrc gr zw fylb." \
+    " rfyrq ufyr amknsrcpq ypc dmp." \
+    " bmgle gr gl zw fylb gq glcddgagclr " \
+    "ylb rfyr'q ufw rfgq rcvr gq qm jmle." \
+    " sqgle qrpgle.kyicrpylq() gq pcamkkclbcb." \
+    " lmu ynnjw ml rfc spj."
+# print(ord(s[3]))
+# print(chr(109))
+z = ""
+# for i in s:
+#     if i == " " or i == "(" or i == ")" or i == "'" or i == ".":
+#         z += i
+#     else:
+#         z += chr(ord(i) + 2)
+# print(z)
+for i in s:  # для каждого элемента из последовательностей эс
+    if i == " " or i == "(" or i == "'" or i == "." or i == ")":
+        z += i
+    else:
+        z += chr(ord(i) + 2)
+print(z)
 
 # =====================================================================================================================
-'''Напишите программу, которая помогает найти это число.
+'''Напишите программу, которая помогает найти число.
 Программа должна считывать размеры команд (два положительных целых числа a и b, каждое число вводится на отдельной строке) 
 и выводить наименьшее число d, которое делится на оба этих числа без остатка.'''
 

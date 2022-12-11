@@ -1607,37 +1607,26 @@ Spaces will be included only when more than one word is present.'''
 # ======================================================================
 '''Напишите программу, на вход которой даются четыре числа a, b, c и d, каждое в своей строке. 
 Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a; b] на все числа отрезка [c; d].'''
-
-a = int(input('enter first digit to generate the column-sequense -->'))
-b = int(input('enter last digit to generate the column-sequense-->'))
-c = int(input('enter first digit to generate the row-sequense -->'))
-d = int(input('enter last digit to generate the row-sequense -->'))
-tmp = []
-row = []
-col = []
-list_of_results = []
-while True:
-    if a <= b and c <= d and a < 10 and b < 10 and c < 10 and d < 10:
-        for i in range(a, b + 1):# creating row of numbers in row list
-            row.append(i) #
-        for i in range(c, d + 1):# creating columns number in col list
-            col.append(i) #
-        print('first num every column starts with -->', row)
-        print('first num every row starts with -->', col)
-        # printing first "column" (informational) for the list_of_results with tab before it:
-        print('now print first column (first num every row starts with)')
-        for i in range(len(col)):
-            print(col[i], '\t', col[i]*row[i])
-
-        # breaking the loop (it asks user to enter numbers until he input the right nums)
-        break
-    else:
-        print('Try it again')
-# for num in list_of_results:
+# print("be sure you've entered a<b, c<d, a<10, b<10, c<10, d<10")
+# a = int(input('enter first number "a" to generate numbers of the columns -->'))
+# b = int(input('enter last number "b" to generate the numbers of the columns -->'))
+# c = int(input('enter first number "c" to generate the numbers of the rows -->'))
+# d = int(input('enter last number "c" to generate the numbers of the rows -->'))
+# while True:
+#      if a <= b and c <= d and a < 10 and b < 10 and c < 10 and d < 10:
+#          #
+#          break
+#      else:
+#          print ('repeat input!')
 
 
 # print(col[0], '\t', row[0] * col[0], '\t', row[0] * col[1], '\t', row[0] * col[2]) - печать первой строки с отступом в начале
 
 
-
-
+# ======================================================================================
+'''
+Напишите программу, на вход которой подаётся список чисел одной строкой. 
+Программа должна для каждого элемента этого списка вывести сумму двух его соседей. 
+Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
+Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
+'''
