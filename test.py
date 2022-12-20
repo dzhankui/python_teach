@@ -1578,11 +1578,11 @@ Spaces will be included only when more than one word is present.'''
 # x = x.reshape(10, 10) #(rows, columns)
 # print(x)
 # =========================================================================
-'''Напишите программу, которая помогает найти это число.
+'''Напишите программу, которая помогает найти число.
 Программа должна считывать размеры команд (два положительных целых числа a и b, каждое число вводится на отдельной строке) 
 и выводить наименьшее число d, которое делится на оба этих числа без остатка.'''
-# aa = int(input())
-# bb = int(input())
+# a = int(input())
+# b = int(input())
 # d = 0
 # while True:
 #     d += 1
@@ -1630,3 +1630,40 @@ Spaces will be included only when more than one word is present.'''
 Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
 Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
 '''
+
+#=============================/  Dict of lists   /==============================
+
+import pandas as pd
+df = pd.DataFrame(
+    {
+        'From': [
+            'Moscow',
+            'Moscow',
+            'St. Petersburg',
+            'St. Petersburg',
+            'St. Petersburg',
+        ],
+        'To': ['Rome', 'Rome', 'Rome', 'Barcelona', 'Barcelona'],
+        'Is_Direct': [False, True, False, False, True],
+        'Has_luggage': [True, False, False, True, False],
+        'Price': [21032, 19250, 19301, 20168, 31425],
+        'Date_From': [
+            '01.07.19',
+            '01.07.19',
+            '04.07.2019',
+            '03.07.2019',
+            '05.07.2019',
+        ],
+        'Date_To': [
+            '07.07.19',
+            '07.07.19',
+            '10.07.2019',
+            '09.07.2019',
+            '11.07.2019',
+        ],
+        'Airline': ['Belavia', 'S7', 'Finnair', 'Swiss', 'Rossiya'],
+        'Travel_time_from': [995, 230, 605, 365, 255],
+        'Travel_time_to': [350, 225, 720, 355, 250],
+    }
+)
+print(df.info())

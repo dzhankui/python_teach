@@ -62,13 +62,50 @@ s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
 # print(chr(109))
 
 
-
 '''
 Напишите программу, на вход которой подаётся список чисел одной строкой. 
 Программа должна для каждого элемента этого списка вывести сумму двух его соседей. 
 Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
 Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
 '''
+# def find(find_string, string_):
+#     location=0
+#     for index in string_:
+#         location+=1
+#         if(index == find_string):
+#             return location
+# def exit(a):
+#     print("program finished")
+#     print(a)
+#     input("")
+# string_of_number = input("Please enter list of number\n")
+# string_of_number = string_of_number.split(" ")
+# sizeof = 0
+# output_list=[]
+# for idex in string_of_number:
+#     sizeof+=1
+# if sizeof==1:
+#    exit(string_of_number)
+# sizeof1=0
+# for idex in string_of_number:
+#     if_out_of_range = find(idex, string_of_number) - 1
+#     if if_out_of_range < sizeof or if_out_of_range > sizeof:
+#         lower_index = string_of_number[sizeof+find(idex, string_of_number)]
+#     if_out_of_range = find(idex, string_of_number) + 1
+#     if if_out_of_range < sizeof or if_out_of_range > sizeof:
+#         upper_index = string_of_number[sizeof - find(idex, string_of_number)]
+#     output_list[sizeof1] = upper_index+lower_index
+#     sizeof+=1
+# print(output_list)
+# a.remove(a[1])
+# a.remove(a[len(a)-3])
+# print(a)
+# print(b)
+# todo: show functions: min(), max(), .sort, sorted(), 'try-exept' method and get for some codereview.
+
+# ==============================================================================
+
+# ==============================================================================
 def find(find_string, string_):
     location=0
     for index in string_:
@@ -79,57 +116,32 @@ def exit(a):
     print("program finished")
     print(a)
     input("")
-string_of_number = input("Please enter list of number\n")
-string_of_number = string_of_number.split(" ")
-sizeof = 0
-output_list=[]
-for idex in string_of_number:
-    sizeof+=1
+string_of_number: str = input("Please enter list of number\n")
+list_of_number = string_of_number.split(" ")
+sizeof = len(list_of_number)
 if sizeof==1:
-   exit(string_of_number)
-sizeof1=0
-for idex in string_of_number:
-    if_out_of_range = find(idex, string_of_number) - 1
-    if if_out_of_range < sizeof or if_out_of_range > sizeof:
-        lower_index = string_of_number[sizeof+find(idex, string_of_number)]
-    if_out_of_range = find(idex, string_of_number) + 1
-    if if_out_of_range < sizeof or if_out_of_range > sizeof:
-        upper_index = string_of_number[sizeof - find(idex, string_of_number)]
-    output_list[sizeof1] = upper_index+lower_index
-    sizeof+=1
+   exit(list_of_number)
+counter=-1
+output_list = []
+for index in list_of_number:
+    counter += 1
+    try:
+        number_index_L=list_of_number[find(index, list_of_number)-1]
+        int(number_index_L)
+    except:
+        number_index_L=list_of_number[::-1]
+        int(number_index_L)
+    try:
+        number_index_H=list_of_number[find(index, list_of_number)+1]
+        int(number_index_H)
+    except:
+        number_index_H=list_of_number[0]
+        int(number_index_H)
+    output_list[counter] = (number_index_L + number_index_H)
 print(output_list)
-# a.remove(a[1])
-# a.remove(a[len(a)-3])
-# print(a)
-# print(b)
-# todo: show functions: min(), max(), .sort, sorted(), 'try-exept' method and get for som codereview.
-
-# ==============================================================================
-'''Напишите простой калькулятор, который считывает с пользовательского ввода три строки: 
-первое число, второе число и операцию, после чего применяет операцию к введённым числам 
-("первое число" "операция" "второе число") и выводит результат на экран.'''
-# ==============================================================================
-'''Напишите программу, которая получает на вход три целых числа, по одному числу в строке, 
-и выводит на консоль в три строки сначала максимальное, потом минимальное, после чего оставшееся число.'''
-# ==============================================================================
-'''
-В институте биоинформатики по офису передвигается робот. 
-Недавно студенты из группы программистов написали для него программу, по которой робот, 
-когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".
-Для того, чтобы это звучало правильно, для каждого nn нужно использовать верное окончание слова.
-Напишите программу, считывающую с пользовательского ввода целое число nn (неотрицательное), 
-выводящее это число в консоль вместе с правильным образом изменённым словом "программист", 
-для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
-В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, 
-как минимум до 1000 человек.
-'''
-# ==============================================================================
 '''Regular expressions'''
-# The page states: "recognize the characters.
-# maybe they are in the book, but MAYBE they are in the page source."
-# See the page source for more info
-'''
-%%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
+# Найти буквы, сложить слово
+txt = '''%%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
 @##&{#&{&)*%(]{{([*}@[@&]+!!*{)!}{%+{))])[!^})+)$]#{*+^((@^@}$[**$&^{$!@#$%)!@(&
 +^!{%_$&@^!}$_${)$_#)!({@!)(^}!*^&!$%_&&}&_#&@{)]{+)%*{&*%*&@%$+]!*__(#!*){%&@++
 !_)^$&&%#+)}!@!)&^}**#!_$([$!$}#*^}$+&#[{*{}{((#$]{[$[$$()_#}!@}^@_&%^*!){*^^_$^
@@ -1348,7 +1360,82 @@ $#_}*!(+([_&%{^&[([%]}*^{{([@+@]@*&@_!]_+([(#&!]]#$$#]@#{_]][_{@]{*))$({%}_![@$]
 @)](+[$*_(]*$[[&@^(_*#(*&!^{+]_%)_)^[}@]#]%#@+^+[%{_*{!)}#$@#)_$!_(!*+#}%%}+$&$[
 %&]!{{%*_!*}&)}$**_{*!#%[[#]!](^^$![#[[*}%(_#^^!%))!_^@)@**@}}(%%{#*%@(((]^%^![&
 }!)$]&($)@](+(#{$)_%^%_^^#][{*[)%}+[##(##^{$}^]#&(&*{)%)&][&{]&#]}[[^^&[!#}${@_(
-#@}&$[[%]_&$+)$!%{(}$^$}*
-'''
+#@}&$[[%]_&$+)$!%{(}$^$}*'''
+# import re
+# x = re.findall("[a-zA-Z]", txt)
+# print(x)
 # ==============================================================================
+# a = int(input())
+# b = int(input())
+# try:
+#     x = a / b
+# except:
+#     print('Try it again')
+# ============================================= срезы ================================
+# text = [11, 2, 3, 44]
+# print(text[::])  # start stop step
+# print(text[::-1])
+# =============================================================================
 
+'''Напишите простой калькулятор, который считывает с пользовательского ввода три строки: 
+первое число, второе число и операцию, после чего применяет операцию к введённым числам 
+("первое число" "операция" "второе число") и выводит результат на экран.'''
+# ==============================================================================
+'''Напишите программу, которая получает на вход три целых числа, по одному числу в строке, 
+и выводит на консоль в три строки сначала максимальное, потом минимальное, после чего оставшееся число.'''
+# ==============================================================================
+'''
+В институте биоинформатики по офису передвигается робот. 
+Недавно студенты из группы программистов написали для него программу, по которой робот, 
+когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".
+Для того, чтобы это звучало правильно, для каждого nn нужно использовать верное окончание слова.
+Напишите программу, считывающую с пользовательского ввода целое число nn (неотрицательное), 
+выводящее это число в консоль вместе с правильным образом изменённым словом "программист", 
+для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
+В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, 
+как минимум до 1000 человек.
+'''
+
+'''========================================      dictionaries       =========================================='''
+'''
+list
+list operations
+list exersises
+list of dictionaries
+'''
+# import pandas as pd
+# df = pd.DataFrame(
+#     {
+#         'From': [
+#             'Moscow',
+#             'Moscow',
+#             'St. Petersburg',
+#             'St. Petersburg',
+#             'St. Petersburg',
+#         ],
+#         'To': ['Rome', 'Rome', 'Rome', 'Barcelona', 'Barcelona'],
+#         'Is_Direct': [False, True, False, False, True],
+#         'Has_luggage': [True, False, False, True, False],
+#         'Price': [21032, 19250, 19301, 20168, 31425],
+#         'Date_From': [
+#             '01.07.19',
+#             '01.07.19',
+#             '04.07.2019',
+#             '03.07.2019',
+#             '05.07.2019',
+#         ],
+#         'Date_To': [
+#             '07.07.19',
+#             '07.07.19',
+#             '10.07.2019',
+#             '09.07.2019',
+#             '11.07.2019',
+#         ],
+#         'Airline': ['Belavia', 'S7', 'Finnair', 'Swiss', 'Rossiya'],
+#         'Travel_time_from': [995, 230, 605, 365, 255],
+#         'Travel_time_to': [350, 225, 720, 355, 250],
+#     }
+# )
+# print(df.info())
+
+'''========================================     working with files      ======================================'''
