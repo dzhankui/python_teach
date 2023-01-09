@@ -68,6 +68,8 @@ s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
 Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
 Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
 '''
+# === some shit ===
+#
 # def find(find_string, string_):
 #     location=0
 #     for index in string_:
@@ -101,44 +103,43 @@ s = "g fmnc wms bgblr rpylqjyrc gr zw fylb. " \
 # a.remove(a[len(a)-3])
 # print(a)
 # print(b)
-# todo: show functions: min(), max(), .sort, sorted(), 'try-exept' method and get for some codereview.
 
 # ==============================================================================
-
-# ==============================================================================
-def find(find_string, string_):
-    location=0
-    for index in string_:
-        location+=1
-        if(index == find_string):
-            return location
-def exit(a):
-    print("program finished")
-    print(a)
-    input("")
-string_of_number: str = input("Please enter list of number\n")
-list_of_number = string_of_number.split(" ")
-sizeof = len(list_of_number)
-if sizeof==1:
-   exit(list_of_number)
-counter=-1
-output_list = []
-for index in list_of_number:
-    counter += 1
-    try:
-        number_index_L=list_of_number[find(index, list_of_number)-1]
-        int(number_index_L)
-    except:
-        number_index_L=list_of_number[::-1]
-        int(number_index_L)
-    try:
-        number_index_H=list_of_number[find(index, list_of_number)+1]
-        int(number_index_H)
-    except:
-        number_index_H=list_of_number[0]
-        int(number_index_H)
-    output_list[counter] = (number_index_L + number_index_H)
-print(output_list)
+#  === some shit 2 ===
+# def find(find_string, string_):
+#     location=0
+#     for index in string_:
+#         location+=1
+#         if(index == find_string):
+#             return location
+# def exit(a):
+#     print("program finished")
+#     print(a)
+#     input("")
+# string_of_number: str = input("Please enter list of number\n")
+# list_of_number = string_of_number.split(" ")
+# sizeof = len(list_of_number)
+# if sizeof==1:
+#    exit(list_of_number)
+# counter=-1
+# output_list = []
+# for index in list_of_number:
+#     counter += 1
+#     try:
+#         number_index_L=list_of_number[find(index, list_of_number)-1]
+#         int(number_index_L)
+#     except:
+#         number_index_L=list_of_number[::-1]
+#         int(number_index_L)
+#     try:
+#         number_index_H=list_of_number[find(index, list_of_number)+1]
+#         int(number_index_H)
+#     except:
+#         number_index_H=list_of_number[0]
+#         int(number_index_H)
+#     output_list[counter] = (number_index_L + number_index_H)
+# print(output_list)
+# right =======
 '''Regular expressions'''
 # Найти буквы, сложить слово
 txt = '''%%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
