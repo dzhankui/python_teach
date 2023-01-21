@@ -1624,12 +1624,6 @@ Spaces will be included only when more than one word is present.'''
 
 
 # ======================================================================================
-'''
-Напишите программу, на вход которой подаётся список чисел одной строкой. 
-Программа должна для каждого элемента этого списка вывести сумму двух его соседей. 
-Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
-Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
-'''
 # list_of_results = []
 # list_of_nums = []
 # input_str = input('please, gimme a nums-->')
@@ -1647,12 +1641,12 @@ Spaces will be included only when more than one word is present.'''
 # # output elements of the list_of_results
 # print(list_of_results)
 # =============================/  Dict of lists   /=======================
-lst=[]
-for i in range(3):
-    lst.append(int(input('enter a number -->')))
-lst.sort()
-print(lst)
-print(lst[2])
-print(lst[0])
-print(lst[1])
-print(lst[0::-1])
+# lst=[]
+# for i in range(3):
+#     lst.append(int(input('enter a number -->')))
+# lst.sort()
+# print(lst)
+# print(lst[2])
+# print(lst[0])
+# print(lst[1])
+# print(lst[0::-1])

@@ -1404,6 +1404,37 @@ list operations
 list exersises
 list of dictionaries
 '''
+# -------------------------------------------
+'''Write a function that takes in a string of one or more words, and returns the same string,
+but with all five or more letter words reversed (Just like the name of this Kata).
+Strings passed in will consist of only letters and spaces.
+Spaces will be included only when more than one word is present.'''
+# words = input()
+#
+#
+# def reverse(*args):
+#     wordSplit = words.split()
+#     a = ''
+#     for word in wordSplit:
+#         if len(word) >= 5:
+#             wordSplit[wordSplit.index(word)] = word[::-1]
+#             a = ' '.join(wordSplit)
+#     print(a)
+#
+#
+# reverse()
+# done
+# ------------------------------------------
+'''Напишите программу, которая считывает целые числа с консоли по одному числу в строке.
+Для каждого введённого числа проверить:
+если число меньше 10, то пропускаем это число;
+если число больше 100, то прекращаем считывать числа;
+в остальных случаях вывести это число обратно на консоль в отдельной строке.'''
+# ------------------------------------------
+'''Напишите программу, на вход которой даются четыре числа a, b, c и d, каждое в своей строке. 
+Программа должна вывести фрагмент таблицы умножения для всех чисел отрезка [a; b] на все числа отрезка [c; d].'''
+# ------------------------------------------
+'''DataFrames'''
 # import pandas as pd
 # df = pd.DataFrame(
 #     {
@@ -1440,3 +1471,19 @@ list of dictionaries
 # print(df.info())
 
 '''========================================     working with files      ======================================'''
+#
+import os
+
+# file = open("test.txt", "a")  # open file to read, if it does not exist, create it
+# # .
+# enter_sandman=(["Now I lay me down to sleep",
+#                 "Pray the Lord my sout to keep",
+#                 "If I die before awake",
+#                 "Pray the Lord my soul to take"])
+# file.writelines(enter_sandman)
+#
+# with open('test.txt', 'w') as file:
+#     file.write('1')
+#     file.write('')
+#     file.write('2')
+
