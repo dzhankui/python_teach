@@ -210,12 +210,6 @@ Spaces will be included only when more than one word is present.'''
 Для элементов списка, являющихся крайними, одним из соседей считается элемент, находящий на противоположном конце этого списка. 
 Например, если на вход подаётся список "1 3 5 6 10", то на выход ожидается список "13 6 9 15 7" (без кавычек).
 '''
-
-
-
-
-
-
 # ==============================================================================
 '''
 В институте биоинформатики по офису передвигается робот. 
@@ -228,3 +222,12 @@ Spaces will be included only when more than one word is present.'''
 В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, 
 как минимум до 1000 человек.
 '''
+# =============================================================================
+'''Write a Python program to calculate a dog's age in dog years. Go to the editor
+Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years.
+Expected Output:
+Input a dog's age in human years: 15                                    
+The dog's age in dog's years is 73'''
+
+
+# ===========================================================================
