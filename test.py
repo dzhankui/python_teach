@@ -1676,14 +1676,13 @@ usb_2_cost = int(input('стоимость разветвителя на 2 по�
 usb_5_cost = int(input('стоимость хаба на 5 портов'))
 devices_to_plug = 0
 free_usb = 0
-if m <= n:
+if m <= n:  # если гаджетов меньше, чем портов, то все ок
     print(0)
 else:
-    devices_to_plug = m - (n - 1)
-    if devices_to_plug <= 2:
+    m -= n - 1  # оставляем один порт свободным для хаба, остальные затыкиваем девайсами, число девайсов уменьшаем на число портов
+    if m == 2:
         print(usb_2_cost)
-    elif (devices_to_plug > 2) and (devices_to_plug <= 5):
+    elif m > 2 and m <= 5:
         print(usb_5_cost)
     else:
-        devices_to_plug = devices_to_plug - (devices_to_plug %)
-        print()
+        print(usb_5_cost * (m - 2))
