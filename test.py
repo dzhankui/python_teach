@@ -137,8 +137,6 @@
 # todo Search for those letters, using the re (regular expression) module
 '''
 find rare characters in the mess below:
-
-
 %%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
 @##&{#&{&)*%(]{{([*}@[@&]+!!*{)!}{%+{))])[!^})+)$]#{*+^((@^@}$[**$&^{$!@#$%)!@(&
 +^!{%_$&@^!}$_${)$_#)!({@!)(^}!*^&!$%_&&}&_#&@{)]{+)%*{&*%*&@%$+]!*__(#!*){%&@++
@@ -1359,9 +1357,7 @@ $#_}*!(+([_&%{^&[([%]}*^{{([@+@]@*&@_!]_+([(#&!]]#$$#]@#{_]][_{@]{*))$({%}_![@$]
 %&]!{{%*_!*}&)}$**_{*!#%[[#]!](^^$![#[[*}%(_#^^!%))!_^@)@**@}}(%%{#*%@(((]^%^![&
 }!)$]&($)@](+(#{$)_%^%_^^#][{*[)%}+[##(##^{$}^]#&(&*{)%)&][&{]&#]}[[^^&[!#}${@_(
 #@}&$[[%]_&$+)$!%{(}$^$}*
-
 '''
-from typing import List, Any, Generator
 
 # ==================================================================
 # def add(a, b):
@@ -1488,55 +1484,6 @@ from typing import List, Any, Generator
 # print(d[0])
 # print(d[1])
 
-#   ===========================================================================
-# todo решить в т.ч. при помощи str, обрабатывая символы строки (изначально введенное число - строка)
-# В институте биоинформатики по офису передвигается робот. Недавно студенты из группы программистов написали для него программу,
-# по которой робот, когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".#
-# Для того, чтобы это звучало правильно, для каждого nn нужно использовать верное окончание слова.#
-# Напишите программу, считывающую с пользовательского ввода целое число nn (неотрицательное),
-# выводящее это число в консоль вместе с правильным образом изменённым словом "программист",
-# для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
-# # В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, как минимум до 1000 человек.
-
-#           ========= solvation using numbers =========
-# p = 'программист'
-# o = 'ов'
-# a = 'а'
-#
-# InputNumber = abs(int(input()))
-# print(InputNumber // 10)
-# print(InputNumber % 10)
-# #    =========    программист     =========
-# if InputNumber == 1 or (InputNumber % 10 == 1 and 981 >= InputNumber > 11):
-#     print(InputNumber, p)
-#
-#
-# #    =========    программиста    =========
-# elif InputNumber // 100 == 0 or (1 < InputNumber % 10 < 5 and InputNumber % 11 != 0):
-#     print(InputNumber, p + a)
-#
-# #    =========    программистов     =========
-# # todo for 11, 12, 13, 14 & etc + x00
-# elif InputNumber % 11 == 0 and InputNumber
-#
-# #  11
-# InputNumber % 10 == 1
-# InputNumber // 10 ==1
-# # xx1
-# (InputNumber % 100) % 11 == 0
-# #  12
-# (InputNumber % 100) % (3 and 4) == 0
-
-
-# elif 1 < (InputNumber % 10) <= 6 and InputNumber // 10 == (1 or 2 or 3):
-#     print(InputNumber, p + o)
-
-#    =========    реализовать в виде вложенных условий, типа, принцип "отсева" введенного значения    =========
-#  выяснить, лучшее ли это решение алгоритмически?
-# if InputNumber % 100 == 0:
-#     if InputNumber % 10 ==0:
-#         if InputNumber % (2 or )
-
 #   ===================     swapinGame   ======================
 '''Write a function that takes in a string of one or more words, and returns the same string,
 but with all five or more letter words reversed (Just like the name of this Kata).
@@ -1652,8 +1599,7 @@ Spaces will be included only when more than one word is present.'''
 # print(lst[0::-1])
 
 
-
-#----===================  NAILS  ===================----
+# ----===================  NAILS  ===================----
 '''
 В дощечке в один ряд вбиты гвоздики. Любые два гвоздика можно соединить ниточкой. 
 Требуется соединить некоторые пары гвоздиков ниточками так, 
@@ -1718,12 +1664,159 @@ Output:
 После этого минимальная неровность забора будет равна разнице между длиной последней доски 
 (самой длинной из оставшихся) и длиной первой доски (самой короткой из оставшихся).
 '''
-n, k = map(int, input().split())
-lengths = list(map(int, input().split()))
-# Сортируем массив длин досок
-lengths.sort()
-# Отбрасываем лишние доски
-lengths = lengths[k:]
-# Вычисляем минимальную неровность забора
-minimum_unevenness = lengths[-1] - lengths[0]
-print(minimum_unevenness)
+
+# n, k = map(int, input().split())
+# lengths = list(map(int, input().split()))
+# # Сортируем массив длин досок
+# lengths.sort()
+# # Отбрасываем лишние доски
+# lengths = lengths[k:]
+# # Вычисляем минимальную неровность забора
+# minimum_unevenness = lengths[-1] - lengths[0]
+# print(minimum_unevenness)
+# a = True
+# b = False
+# #       False               False
+# #       False        #False       #True
+# print((a and b) or ((not a) and (not b)))
+# x = 5
+# y = 10
+# print(y > x * x or y >= 2 * x and x < y)
+# False         True          True
+# def library(letter):
+#     if letter == "x":
+#         print("*     *")
+#         print(' *   * ')
+#         print("  * *  ")
+#         print("   *   ")
+#         print("  * *  ")
+#         print(' *   * ')
+#         print("*     *")
+#     elif letter == "s":
+#         for i in range(7):
+#             if i == 0:
+#                 print(" ", 4 * "*")
+#             elif i == 3:
+#                 print(" ", 3 * "*", " ")
+#             elif i == 4 or i == 5:
+#                 print(4 * " ", "*")
+#             elif i == 6:
+#                 print(4 * "*", " ")
+#             else:
+#                 print("*")
+#     elif letter == "g":
+#         for i in range(7):
+#             if i == 0 or i == 6:
+#                 print(3 * "*")
+#             elif i == 3:
+#                 print("*", " ", 3 * "*")
+#             elif i == 2:
+#                 print("*")
+#             else:
+#                 print("*", " ", "*")
+#     elif letter == "a":
+#         for i in range(8):
+#             if i == 0:
+#                 print(" ", 3 * "*")
+#             if i == 3:
+#                 print(7 * "*")
+#             else:
+#                 print("*", '   ', "*")
+#     elif letter == "d":
+#         for i in range(8):
+#             if i == 0 or i == 7:
+#                 print(4 * "*", " ")
+#             else:
+#                 print("*", " ", " ""*")
+#     elif letter == "break":
+#         return 0
+#
+
+# while True:
+#     library(input('напиши букву'))
+
+# def summarize(*args):
+#     lst = map(int, input('type numbers to summarize them'))
+#     return sum(lst)
+#
+#
+# print(summarize())
+# year = int(input())
+# if (year // 4 == 0 and year // 100 != 0) or year // 400 == 0:
+#     print('Високосный')
+# else:
+#     print('Обычный')
+
+# from math import sqrt
+#
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# p = (a + b + c) / 2
+# print(sqrt(p * (p - a) * (p - b) * (p - c)))
+
+# a = int(input())
+#
+# if (-15 < a and a <= 12) or (14 < a and a < 17) or a >= 19:
+#     print(True)
+# else:
+#     print(False)
+
+# inp = int(input())
+#   ===========================================================================
+# В институте биоинформатики по офису передвигается робот. Недавно студенты из группы программистов написали для него программу,
+# по которой робот, когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".#
+# Для того, чтобы это звучало правильно, для каждого nn нужно использовать верное окончание слова.#
+# Напишите программу, считывающую с пользовательского ввода целое число nn (неотрицательное),
+# выводящее это число в консоль вместе с правильным образом изменённым словом "программист",
+# для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
+# # В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, как минимум до 1000 человек.
+
+#           ========= solvation using numbers =========
+# p = 'программист'
+# o = 'ов'
+# a = 'а'
+#
+# InputNumber = abs(int(input()))
+# print(InputNumber // 10)
+# print(InputNumber % 10)
+# #    =========    программист     =========
+# if InputNumber == 1 or (InputNumber % 10 == 1 and 981 >= InputNumber > 11):
+#     print(InputNumber, p)
+#
+#
+# #    =========    программиста    =========
+# elif InputNumber // 100 == 0 or (1 < InputNumber % 10 < 5 and InputNumber % 11 != 0):
+#     print(InputNumber, p + a)
+#
+# #    =========    программистов     =========
+# # todo for 11, 12, 13, 14 & etc + x00
+# elif InputNumber % 11 == 0 and InputNumber
+#
+# #  11
+# InputNumber % 10 == 1
+# InputNumber // 10 ==1
+# # xx1
+# (InputNumber % 100) % 11 == 0
+# #  12
+# (InputNumber % 100) % (3 and 4) == 0
+
+
+# elif 1 < (InputNumber % 10) <= 6 and InputNumber // 10 == (1 or 2 or 3):
+#     print(InputNumber, p + o)
+
+#    =========    реализовать в виде вложенных условий, типа, принцип "отсева" введенного значения    =========
+#  выяснить, лучшее ли это решение алгоритмически?
+# if InputNumber % 100 == 0:
+#     if InputNumber % 10 ==0:
+#         if InputNumber % (2 or )
+# --------------------------------
+# a = int(input())
+# b = int(10)
+# if a % b == 0 or a % b == 5 or a % b == 6 or a % b == 7 or a % b == 8 or a % b == 9 or (5 < a <= 20):
+#     print(a,' программистов')
+# elif a % b == 1:
+#     print(a,' программист')
+# elif (a % b == 2 or a % b == 3 or a % b == 4):
+#     print(a,' программиста')
+

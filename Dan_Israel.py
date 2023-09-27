@@ -58,7 +58,7 @@
 #     hp = (a + b + c) / 2
 #     Area = sqrt(hp * (hp - a) * (hp - b) * (hp - c))
 # print(Area)
-#
+
 # =======================================================
 '''вывести на экран 100 строк со значением от 1 до 100'''
 # for number in range(0, 100, 5): #start, stop, step
@@ -223,7 +223,7 @@ Spaces will be included only when more than one word is present.'''
 как минимум до 1000 человек.
 '''
 # =============================================================================
-'''Write a Python program to calculate a dog's age in dog years. Go to the editor
+'''Write a Python program to calculate a dog's age in dog years. 
 Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years.
 Expected Output:
 Input a dog's age in human years: 15                                    
